@@ -94,6 +94,35 @@ header nav .brand {
   letter-spacing: -0.01em;
 }
 
+header nav .lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+header nav .lang-switch .lang-sep {
+  color: var(--color-text-muted);
+  user-select: none;
+}
+
+header nav .lang-switch a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+header nav .lang-switch a:hover {
+  color: var(--color-accent);
+}
+
+header nav .lang-switch a.lang-active {
+  color: var(--color-accent);
+  font-weight: 600;
+  pointer-events: none;
+}
+
 header nav .nav-links {
   display: flex;
   gap: 24px;
@@ -319,12 +348,69 @@ footer a:hover {
   display: block;
 }
 
+.language-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.language-option {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.language-option:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-border-hover);
+}
+
+.language-option .language-code {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.language-option .language-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.language-option .language-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
 @media (max-width: 640px) {
   header nav {
     flex-direction: column;
     height: auto;
     padding: 12px 0;
     gap: 8px;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  header nav .lang-switch {
+    order: -1;
+    width: 100%;
+    justify-content: center;
   }
 
   header nav .nav-links {
@@ -345,6 +431,14 @@ footer a:hover {
 
   .callout {
     padding: 14px 16px;
+  }
+
+  .language-option {
+    padding: 18px;
+  }
+
+  .language-option .language-name {
+    font-size: 1.125rem;
   }
 
   footer p {
