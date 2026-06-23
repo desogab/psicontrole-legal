@@ -3,84 +3,287 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suporte — PsiControle</title>
-  <meta name="description" content="Página de suporte do PsiControle, um app iOS local-first para gerenciar rotinas clínicas, pacientes, atendimentos e pagamentos.">
+  <title>PsiControle — rotina clínica organizada no iPhone</title>
+  <meta name="description" content="PsiControle é um app nativo iOS para psicólogos organizarem agenda, pacientes, lembretes, pendências e recebíveis com dados clínicos locais.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PsiControle — rotina clínica organizada no iPhone">
+  <meta property="og:description" content="Um app nativo iOS para psicólogos organizarem agenda, pacientes, lembretes, pendências e recebíveis com dados clínicos locais.">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="canonical" href="./">
+  <link rel="alternate" hreflang="pt-BR" href="../pt-BR/">
+  <link rel="alternate" hreflang="en" href="../en/">
+  <link rel="icon" href="../assets/img/brand/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
+  <script src="../assets/js/config.js" defer></script>
+  <script src="../assets/js/site.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<header>
-  <nav>
-    <a href="index.html" class="brand">PsiControle</a>
-    <div class="lang-switch">
-      <a href="../en/index.html" lang="en">EN</a>
-      <span class="lang-sep">|</span>
-      <a href="index.html" class="lang-active" lang="pt-BR">PT-BR</a>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Navegação principal">
+    <a href="./" class="brand-link" aria-label="PsiControle">
+      <img src="../assets/img/brand/brand-mark.png" alt="" width="34" height="34">
+      <span>PsiControle</span>
+    </a>
+
+    <div class="nav-actions">
+      <div class="main-nav" aria-label="Seções">
+        <a href="#recursos">Recursos</a>
+        <a href="#privacidade">Privacidade</a>
+        <a href="#telas">Telas</a>
+        <a class="nav-download" data-app-store-link>Baixar</a>
+      </div>
+
+      <div class="lang-switch" aria-label="Idioma">
+        <a href="../en/" lang="en">EN</a>
+        <a href="./" class="lang-active" lang="pt-BR" aria-current="page">PT-BR</a>
+      </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Suporte</a></li>
-      <li><a href="privacy.html">Política de Privacidade</a></li>
-      <li><a href="terms.html">Termos de Uso</a></li>
-    </ul>
   </nav>
 </header>
 
-<main>
+<main id="conteudo" class="page-shell">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">App nativo para iOS</p>
+        <h1 id="hero-title">Sua rotina clínica organizada no iPhone.</h1>
+        <p class="hero-subtitle">O PsiControle reúne agenda, pacientes, lembretes, pendências e recebíveis em um app simples para iOS — com dados clínicos armazenados localmente no dispositivo.</p>
+        <p class="hero-support">Sem dashboard web. Sem conta externa. Feito para a rotina clínica diária.</p>
 
-  <h1>Suporte PsiControle</h1>
-  <p class="subtitle">Um app iOS local-first para gerenciar rotinas clínicas, pacientes, atendimentos, anotações, pagamentos, lembretes e fluxos de trabalho relacionados ao calendário.</p>
+        <div class="hero-actions">
+          <a class="app-store-badge" data-app-store-link aria-label="Baixar na App Store">
+            <span class="app-store-glyph" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M16.63 12.67c-.02-2.1 1.72-3.12 1.8-3.17-1-.95-2.54-1.08-3.08-1.1-1.3-.14-2.56.77-3.22.77-.67 0-1.69-.75-2.78-.73-1.43.02-2.75.83-3.49 2.1-1.49 2.58-.38 6.38 1.05 8.47.72 1.02 1.56 2.16 2.67 2.12 1.08-.04 1.48-.68 2.78-.68 1.29 0 1.66.68 2.79.66 1.16-.02 1.89-1.03 2.58-2.06.83-1.18 1.16-2.35 1.17-2.41-.03-.01-2.25-.86-2.27-3.97ZM14.5 7.02c.58-.72.98-1.7.87-2.7-.85.04-1.9.58-2.51 1.28-.54.63-1.03 1.66-.9 2.63.96.07 1.94-.49 2.54-1.21Z"/>
+              </svg>
+            </span>
+            <span class="app-store-copy">
+              <span class="app-store-preline">Baixar na</span>
+              <span class="app-store-store">App Store</span>
+            </span>
+          </a>
+        </div>
+      </div>
 
-  <div class="card">
-    <h2>Como o PsiControle funciona</h2>
-    <ul class="section-list">
-      <li><strong>Prioridade local.</strong> Todos os dados de pacientes, atendimentos, documentos, endereços e anotações são armazenados localmente no seu dispositivo. O app não envia esses dados para servidores externos.</li>
-      <li><strong>Sem login de terceiros.</strong> O PsiControle não opera um sistema de login de terceiros ou conta externa.</li>
-      <li><strong>Sem análises ou rastreamento.</strong> O app não inclui um SDK de análise e não rastreia usuários entre apps e sites.</li>
-      <li><strong>Sem compartilhamento de dados.</strong> O app não compartilha dados do usuário com terceiros.</li>
-    </ul>
-  </div>
+      <div class="hero-visual" aria-label="Tela inicial do PsiControle">
+        <div class="phone-frame">
+          <img src="../assets/img/pt-BR/home.png" alt="Tela inicial do PsiControle com rotina clínica do dia e pendências" width="1242" height="2688">
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="card">
-    <h2>Suporte de assinatura</h2>
-    <p>As assinaturas são gerenciadas pela Apple. Você pode gerenciar ou cancelar sua assinatura nas configurações do seu Apple ID:</p>
-    <ul class="section-list">
-      <li>Abra o app <strong>Ajustes</strong> no seu iPhone</li>
-      <li>Toque no seu <strong>nome</strong> na parte superior</li>
-      <li>Toque em <strong>Assinaturas</strong></li>
-      <li>Selecione <strong>PsiControle</strong> e escolha gerenciar ou cancelar</li>
-    </ul>
-  </div>
+  <section class="trust-strip" aria-label="Destaques">
+    <div class="trust-strip-inner">
+      <div class="trust-item">
+        <strong>Dados locais</strong>
+      </div>
+      <div class="trust-item">
+        <strong>Experiência nativa iOS</strong>
+      </div>
+      <div class="trust-item">
+        <strong>Eventos neutros no calendário</strong>
+      </div>
+      <div class="trust-item">
+        <strong>Sem compartilhamento de dados</strong>
+      </div>
+    </div>
+  </section>
 
-  <div class="callout">
-    <p>Apagar o app do seu dispositivo não cancela sua assinatura na App Store. Para evitar cobranças futuras, cancele a assinatura nas configurações do seu Apple ID antes de apagar o app.</p>
-  </div>
+  <section id="recursos" class="content-section" aria-labelledby="features-title">
+    <div class="section-heading">
+      <p class="section-kicker">Rotina clínica</p>
+      <h2 id="features-title">Tudo que precisa estar visível antes, durante e depois de cada atendimento.</h2>
+      <p>Mantenha agenda, contexto do paciente, pendências e recebíveis sempre por perto — sem depender de planilhas, anotações soltas ou ferramentas desconectadas.</p>
+    </div>
 
-  <div class="card">
-    <h2>Precisa de ajuda?</h2>
-    <p>Se você tiver dúvidas, sugestões ou precisar de assistência, entre em contato:</p>
-    <p><a href="mailto:desogab@icloud.com" class="contact-link">desogab@icloud.com</a></p>
-  </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-chip teal">Agenda</span>
+        <h3>Atendimentos organizados por dia.</h3>
+        <p>Veja os atendimentos de hoje, próximos compromissos, recorrências e lembretes com uma visão clara da semana clínica.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-chip sage">Pacientes</span>
+        <h3>Contexto do paciente quando você precisa.</h3>
+        <p>Mantenha contatos, documentos, endereço, notas, histórico e pendências conectados ao cadastro de cada paciente.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-chip warm">Recebíveis</span>
+        <h3>Uma visão focada dos pagamentos pendentes.</h3>
+        <p>Acompanhe valores previstos, sessões não pagas e atendimentos ainda em aberto — sem transformar o app em um sistema financeiro complexo.</p>
+      </article>
+    </div>
+  </section>
 
-  <div class="card">
-    <h2>Legal</h2>
-    <ul class="section-list">
-      <li><a href="privacy.html">Política de Privacidade</a></li>
-      <li><a href="terms.html">Termos de Uso</a></li>
-    </ul>
-  </div>
+  <section class="content-section split-section" aria-labelledby="schedule-title">
+    <div class="split-copy">
+      <p class="section-kicker">Agenda</p>
+      <h2 id="schedule-title">Gerencie atendimentos sem perder o contexto clínico.</h2>
+      <p>Planeje o dia, acompanhe rotinas semanais ou quinzenais e mantenha lembretes alinhados ao Calendário do iOS.</p>
+      <ul class="check-list">
+        <li>Visões por dia, semana e mês.</li>
+        <li>Atendimentos recorrentes com renovação assistida.</li>
+        <li>Texto neutro no calendário por padrão para mais privacidade.</li>
+      </ul>
+    </div>
+    <figure class="screen-figure split-media">
+      <div class="phone-frame">
+        <img src="../assets/img/pt-BR/schedule.png" alt="Tela de agenda do PsiControle com atendimentos e contexto semanal" width="1242" height="2688" loading="lazy">
+      </div>
+      <figcaption class="screen-caption">
+        <strong>Veja sua agenda com clareza.</strong>
+        <span>Acompanhe atendimentos, lembretes e valores previstos ao longo da semana.</span>
+      </figcaption>
+    </figure>
+  </section>
 
+  <section class="content-section split-section reverse" aria-labelledby="patients-title">
+    <div class="split-copy">
+      <p class="section-kicker">Pacientes</p>
+      <h2 id="patients-title">Cada paciente com seu contexto completo.</h2>
+      <p>Busque, filtre e revise cadastros com as informações mais importantes para sua rotina.</p>
+      <ul class="check-list">
+        <li>Dados de contato, documentos e endereço em um só lugar.</li>
+        <li>Indicadores de pendências clínicas e financeiras.</li>
+        <li>Importação CSV processada localmente no dispositivo.</li>
+      </ul>
+    </div>
+    <figure class="screen-figure split-media">
+      <div class="phone-frame">
+        <img src="../assets/img/pt-BR/patients.png" alt="Tela de pacientes do PsiControle com busca, filtros e indicadores" width="1242" height="2688" loading="lazy">
+      </div>
+      <figcaption class="screen-caption">
+        <strong>Gerencie cada paciente com clareza.</strong>
+        <span>Busque, filtre e revise cadastros em segundos.</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="content-section split-section" aria-labelledby="receivables-title">
+    <div class="split-copy">
+      <p class="section-kicker">Recebíveis</p>
+      <h2 id="receivables-title">Saiba o que ainda está pendente.</h2>
+      <p>Acompanhe sessões não pagas e recebimentos pendentes sem misturar organização clínica com um fluxo contábil completo.</p>
+      <ul class="check-list">
+        <li>Pagamentos pendentes agrupados por paciente.</li>
+        <li>Contexto financeiro por atendimento.</li>
+        <li>Separação clara entre sessões realizadas e sessões pagas.</li>
+      </ul>
+    </div>
+    <figure class="screen-figure split-media">
+      <div class="phone-frame">
+        <img src="../assets/img/pt-BR/payments.png" alt="Tela de recebíveis do PsiControle com pagamentos pendentes por paciente" width="1242" height="2688" loading="lazy">
+      </div>
+      <figcaption class="screen-caption">
+        <strong>Acompanhe pagamentos pendentes com clareza.</strong>
+        <span>Revise recebíveis por paciente e atendimento.</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="privacidade" class="content-section privacy-section" aria-labelledby="privacy-title">
+    <div class="section-heading">
+      <p class="section-kicker">Privacidade e segurança</p>
+      <h2 id="privacy-title">Criado para manter dados clínicos no dispositivo.</h2>
+      <p>O PsiControle foi pensado para reduzir exposição: os dados clínicos ficam no iPhone do usuário e não são compartilhados com terceiros.</p>
+    </div>
+
+    <div class="privacy-points">
+      <article class="privacy-point">
+        <strong>Dados locais</strong>
+        <span>O armazenamento principal acontece no iPhone do usuário.</span>
+      </article>
+      <article class="privacy-point">
+        <strong>Sem compartilhamento</strong>
+        <span>Dados de pacientes, atendimentos e anotações não são compartilhados com terceiros.</span>
+      </article>
+      <article class="privacy-point">
+        <strong>Calendário discreto</strong>
+        <span>Eventos e notificações evitam dados de pacientes por padrão.</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="telas" class="content-section" aria-labelledby="screens-title">
+    <div class="section-heading">
+      <p class="section-kicker">Telas</p>
+      <h2 id="screens-title">Fluxos principais com experiência nativa iOS.</h2>
+      <p>Conheça as principais áreas do app: início, agenda, pacientes, recebíveis, sessões em aberto e ajustes.</p>
+    </div>
+
+    <div class="screenshot-gallery">
+      <figure class="screenshot-card">
+        <img src="../assets/img/pt-BR/home.png" alt="Tela inicial do PsiControle com rotina do dia e pendências importantes" width="1242" height="2688" loading="lazy">
+        <figcaption>
+          <strong>Início</strong>
+          <span>Veja a rotina do dia e pendências importantes rapidamente.</span>
+        </figcaption>
+      </figure>
+      <figure class="screenshot-card">
+        <img src="../assets/img/pt-BR/schedule.png" alt="Tela de agenda do PsiControle com atendimentos e lembretes" width="1242" height="2688" loading="lazy">
+        <figcaption>
+          <strong>Agenda</strong>
+          <span>Revise atendimentos, lembretes e contexto semanal.</span>
+        </figcaption>
+      </figure>
+      <figure class="screenshot-card">
+        <img src="../assets/img/pt-BR/patients.png" alt="Tela de pacientes do PsiControle com busca e filtros" width="1242" height="2688" loading="lazy">
+        <figcaption>
+          <strong>Pacientes</strong>
+          <span>Busque, filtre e acesse cadastros com rapidez.</span>
+        </figcaption>
+      </figure>
+      <figure class="screenshot-card">
+        <img src="../assets/img/pt-BR/payments.png" alt="Tela de recebíveis do PsiControle com pagamentos pendentes" width="1242" height="2688" loading="lazy">
+        <figcaption>
+          <strong>Recebíveis</strong>
+          <span>Acompanhe pagamentos pendentes por paciente e atendimento.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="baixar" class="final-cta" aria-labelledby="final-cta-title">
+    <div class="final-cta-inner">
+      <p class="section-kicker">PsiControle</p>
+      <h2 id="final-cta-title">Organize sua rotina clínica no iPhone.</h2>
+      <p>Comece com um app simples, criado para psicólogos que querem clareza, privacidade e menos atrito operacional.</p>
+      <a class="app-store-badge" data-app-store-link aria-label="Baixar na App Store">
+        <span class="app-store-glyph" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M16.63 12.67c-.02-2.1 1.72-3.12 1.8-3.17-1-.95-2.54-1.08-3.08-1.1-1.3-.14-2.56.77-3.22.77-.67 0-1.69-.75-2.78-.73-1.43.02-2.75.83-3.49 2.1-1.49 2.58-.38 6.38 1.05 8.47.72 1.02 1.56 2.16 2.67 2.12 1.08-.04 1.48-.68 2.78-.68 1.29 0 1.66.68 2.79.66 1.16-.02 1.89-1.03 2.58-2.06.83-1.18 1.16-2.35 1.17-2.41-.03-.01-2.25-.86-2.27-3.97ZM14.5 7.02c.58-.72.98-1.7.87-2.7-.85.04-1.9.58-2.51 1.28-.54.63-1.03 1.66-.9 2.63.96.07 1.94-.49 2.54-1.21Z"/>
+          </svg>
+        </span>
+        <span class="app-store-copy">
+          <span class="app-store-preline">Baixar na</span>
+          <span class="app-store-store">App Store</span>
+        </span>
+      </a>
+    </div>
+  </section>
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-links">
-      <a href="privacy.html">Política de Privacidade</a>
-      <a href="terms.html">Termos de Uso</a>
+    <div>
+      <a href="./" class="footer-brand">
+        <img src="../assets/img/brand/brand-mark.png" alt="" width="34" height="34" loading="lazy">
+        <span>PsiControle</span>
+      </a>
     </div>
-    <p>Contato: <a href="mailto:desogab@icloud.com">desogab@icloud.com</a></p>
-    <p>&copy; 2026 PsiControle. Todos os direitos reservados.</p>
+    <div class="footer-meta">
+      <div class="footer-links">
+        <a href="privacy.html">Política de Privacidade</a>
+        <a href="terms.html">Termos de Uso</a>
+        <a href="mailto:desogab@icloud.com">Contato</a>
+        <a href="../en/" lang="en">English</a>
+      </div>
+      <p>&copy; 2026 PsiControle. Todos os direitos reservados.</p>
+    </div>
   </div>
 </footer>
-
 </body>
 </html>

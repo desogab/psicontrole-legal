@@ -1,49 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PsiControle</title>
-  <meta name="description" content="PsiControle — Support, Privacy Policy, and Terms of Use.">
+  <meta name="description" content="PsiControle — agenda clínica, pacientes e recebíveis no seu iPhone.">
+  <link rel="canonical" href="pt-BR/">
+  <link rel="icon" href="assets/img/brand/app-icon.png">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var savedLanguage = "";
+      var browserLanguage = "";
+
+      try {
+        savedLanguage = localStorage.getItem("psicontrole-language") || "";
+      } catch (error) {
+        savedLanguage = "";
+      }
+
+      if (navigator.languages && navigator.languages.length) {
+        browserLanguage = navigator.languages[0];
+      } else {
+        browserLanguage = navigator.language || "";
+      }
+
+      savedLanguage = String(savedLanguage).toLowerCase();
+      browserLanguage = String(browserLanguage).toLowerCase();
+
+      var target = "pt-BR/";
+
+      if (savedLanguage === "en") {
+        target = "en/";
+      } else if (savedLanguage === "pt-br") {
+        target = "pt-BR/";
+      } else if (browserLanguage.indexOf("en") === 0) {
+        target = "en/";
+      }
+
+      window.location.replace(target);
+    })();
+  </script>
 </head>
-<body>
-
-<header>
-  <nav>
-    <a href="index.html" class="brand">PsiControle</a>
-  </nav>
-</header>
-
-<main>
-
-  <h1>Choose your language</h1>
-  <p class="subtitle" lang="pt-BR">Escolha seu idioma</p>
-
-  <div class="language-picker">
-
-    <a href="en/index.html" class="language-option" lang="en">
-      <span class="language-code">EN</span>
-      <span class="language-name">English</span>
-      <span class="language-desc">Support, Privacy Policy, Terms of Use</span>
-    </a>
-
-    <a href="pt-BR/index.html" class="language-option" lang="pt-BR">
-      <span class="language-code">PT-BR</span>
-      <span class="language-name">Português (Brasil)</span>
-      <span class="language-desc">Suporte, Política de Privacidade, Termos de Uso</span>
-    </a>
-
-  </div>
-
-</main>
-
-<footer>
-  <div class="footer-inner">
-    <p>Contact: <a href="mailto:desogab@icloud.com">desogab@icloud.com</a></p>
-    <p>&copy; 2026 PsiControle. All rights reserved.</p>
-  </div>
-</footer>
-
+<body class="redirect-page">
+  <main class="redirect-card" aria-labelledby="redirect-title">
+    <img src="assets/img/brand/brand-mark.png" alt="" width="96" height="96">
+    <h1 id="redirect-title">PsiControle</h1>
+    <p>Escolha uma versão para abrir o site.</p>
+    <div class="redirect-actions" aria-label="Idiomas disponíveis">
+      <a class="button button-primary" href="pt-BR/">Português</a>
+      <a class="button button-secondary" href="en/">English</a>
+    </div>
+  </main>
 </body>
 </html>

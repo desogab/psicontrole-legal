@@ -1,71 +1,54 @@
-# PsiControle Support
+# PsiControle Landing Page
 
-GitHub Pages support and legal site for **PsiControle**, a local-first iOS app for managing clinical routines, patients, appointments, notes, payments, reminders, and calendar-related workflows.
+Static bilingual landing and legal site for **PsiControle**, a native iOS app for organizing clinical schedules, patients, appointments, payments, reminders, and calendar-related workflows.
 
-## Languages
+## Routes
 
-The site is available in two languages:
+| Route | Purpose |
+| --- | --- |
+| `/` | Redirects to `/pt-BR/` |
+| `/pt-BR/` | Portuguese landing page |
+| `/en/` | English landing page |
+| `/pt-BR/privacy.html` | Portuguese Privacy Policy |
+| `/pt-BR/terms.html` | Portuguese Terms of Use |
+| `/en/privacy.html` | English Privacy Policy |
+| `/en/terms.html` | English Terms of Use |
 
-- **English** — `/en/`
-- **Português (Brasil)** — `/pt-BR/`
+## App Store Link
 
-The root page (`/`) is a language picker that links to both.
+Set the localized download URLs in one place:
 
-## Pages
-
-### English (`/en/`)
-
-| Page | URL | Purpose |
-|------|-----|---------|
-| Support | `/en/` or `/en/index.html` | Support page |
-| Privacy Policy | `/en/privacy.html` | App Store Connect Privacy Policy URL |
-| Terms of Use | `/en/terms.html` | App Store Connect Terms of Use URL |
-
-### Português — Brasil (`/pt-BR/`)
-
-| Página | URL | Uso |
-|--------|-----|-----|
-| Suporte | `/pt-BR/` ou `/pt-BR/index.html` | Página de suporte |
-| Política de Privacidade | `/pt-BR/privacy.html` | URL de Política de Privacidade na App Store Connect |
-| Termos de Uso | `/pt-BR/terms.html` | URL de Termos de Uso na App Store Connect |
-
-## Deploy with GitHub Pages
-
-1. Push all files to the `main` branch of this repository.
-2. Go to the repository **Settings** on GitHub.
-3. Go to **Pages**.
-4. Under **Source**, select **Deploy from a branch**.
-5. Under **Branch**, select `main` and folder `/root`.
-6. Click **Save**.
-
-After deployment, the site will be available at:
-
-```
-https://YOUR_USERNAME.github.io/psicontrole-legal/
+```js
+// assets/js/config.js
+window.PSICONTROLE_CONFIG = {
+  APP_STORE_URL_EN: "https://apps.apple.com/us/app/psicontrole-safe-and-smooth/id6772772414",
+  APP_STORE_URL_PT_BR: "https://apps.apple.com/br/app/psicontrole-f%C3%A1cil-e-seguro/id6772772414"
+};
 ```
 
-Recommended App Store Connect URLs (pt-BR):
-
-```
-Support:       https://YOUR_USERNAME.github.io/psicontrole-legal/pt-BR/
-Privacy:       https://YOUR_USERNAME.github.io/psicontrole-legal/pt-BR/privacy.html
-Terms:         https://YOUR_USERNAME.github.io/psicontrole-legal/pt-BR/terms.html
-```
-
-Replace `YOUR_USERNAME` with your GitHub username.
+The script selects the URL from the current page language. If a localized URL is empty, buttons for that page remain visible but disabled.
 
 ## Tech
 
-- Static HTML and CSS only.
+- Static HTML, CSS, and JavaScript only.
 - No build step.
-- No JavaScript.
-- No external frameworks.
-- No tracking scripts.
+- No frameworks.
 - No analytics.
 - No cookies.
-- Responsive design.
-- Accessible contrast ratios.
-- Bilingual: English and Portuguese (Brazil).
+- GitHub Pages compatible.
+- Responsive layout focused on iPhone/iOS presentation.
+
+## Local Preview
+
+```bash
+python3 -m http.server 8080
+```
+
+Then open:
+
+```text
+http://localhost:8080/
+```
 
 ## Contact
 
