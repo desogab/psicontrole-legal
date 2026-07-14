@@ -1,6 +1,6 @@
 # PsiControle Landing Page
 
-Static bilingual landing and legal site for **PsiControle**, a native iOS app for organizing clinical schedules, patients, appointments, payments, reminders, and calendar-related workflows.
+Static bilingual landing and legal site for **PsiControle**, a native iOS app for organizing patients, schedules, recurring appointments, reminders, finances, Siri/Shortcuts workflows, and optional Calendar integration.
 
 ## Routes
 
