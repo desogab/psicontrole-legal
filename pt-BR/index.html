@@ -13,9 +13,9 @@
   <link rel="alternate" hreflang="pt-BR" href="../pt-BR/">
   <link rel="alternate" hreflang="en" href="../en/">
   <link rel="icon" href="../assets/img/brand/app-icon.png">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css?v=20260716">
   <script src="../assets/js/config.js" defer></script>
-  <script src="../assets/js/site.js" defer></script>
+  <script src="../assets/js/site.js?v=20260716" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -69,7 +69,11 @@
 
       <div class="hero-visual" aria-label="Tela inicial do PsiControle">
         <div class="phone-frame">
-          <img src="../assets/img/pt-BR/home.png" alt="Tela inicial do PsiControle com rotina clínica do dia e pendências" width="1320" height="2868">
+          <picture>
+            <source srcset="../assets/img/pt-BR/home.avif" type="image/avif">
+            <source srcset="../assets/img/pt-BR/home.webp" type="image/webp">
+            <img src="../assets/img/pt-BR/home.png" alt="Tela inicial do PsiControle com rotina clínica do dia e pendências" width="1320" height="2868" decoding="async" fetchpriority="high">
+          </picture>
         </div>
       </div>
     </div>
@@ -136,7 +140,11 @@
     </div>
     <figure class="screen-figure split-media">
       <div class="phone-frame">
-        <img src="../assets/img/pt-BR/schedule.png" alt="Tela de agenda do PsiControle com atendimentos e contexto semanal" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/pt-BR/schedule.avif" type="image/avif">
+          <source srcset="../assets/img/pt-BR/schedule.webp" type="image/webp">
+          <img src="../assets/img/pt-BR/schedule.png" alt="Tela de agenda do PsiControle com atendimentos e contexto semanal" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
       </div>
       <figcaption class="screen-caption">
         <strong>Veja sua agenda com clareza.</strong>
@@ -158,7 +166,11 @@
     </div>
     <figure class="screen-figure split-media">
       <div class="phone-frame">
-        <img src="../assets/img/pt-BR/patients.png" alt="Tela de pacientes do PsiControle com busca, filtros e indicadores" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/pt-BR/patients.avif" type="image/avif">
+          <source srcset="../assets/img/pt-BR/patients.webp" type="image/webp">
+          <img src="../assets/img/pt-BR/patients.png" alt="Tela de pacientes do PsiControle com busca, filtros e indicadores" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
       </div>
       <figcaption class="screen-caption">
         <strong>Gerencie cada paciente com clareza.</strong>
@@ -180,7 +192,11 @@
     </div>
     <figure class="screen-figure split-media">
       <div class="phone-frame">
-        <img src="../assets/img/pt-BR/financial.png" alt="Tela financeira do PsiControle com filtros, resumo e valores protegidos" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/pt-BR/financial.avif" type="image/avif">
+          <source srcset="../assets/img/pt-BR/financial.webp" type="image/webp">
+          <img src="../assets/img/pt-BR/financial.png" alt="Tela financeira do PsiControle com filtros, resumo e valores protegidos" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
       </div>
       <figcaption class="screen-caption">
         <strong>Acompanhe sua prática com clareza.</strong>
@@ -219,45 +235,73 @@
       <p>Conheça as principais áreas do app: início, agenda, pacientes, detalhes, novo atendimento, financeiro e ajustes.</p>
     </div>
 
-    <div class="screenshot-gallery">
+    <div class="screenshot-gallery" tabindex="0">
       <figure class="screenshot-card">
-        <img src="../assets/img/pt-BR/home.png" alt="Tela inicial do PsiControle com rotina do dia e pendências importantes" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/pt-BR/home.avif" type="image/avif">
+          <source srcset="../assets/img/pt-BR/home.webp" type="image/webp">
+          <img src="../assets/img/pt-BR/home.png" alt="Tela inicial do PsiControle com rotina do dia e pendências importantes" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption>
           <strong>Início</strong>
           <span>Veja a rotina do dia e pendências importantes rapidamente.</span>
         </figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/pt-BR/schedule.png" alt="Tela de agenda do PsiControle com atendimentos e lembretes" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/pt-BR/schedule.avif" type="image/avif">
+          <source srcset="../assets/img/pt-BR/schedule.webp" type="image/webp">
+          <img src="../assets/img/pt-BR/schedule.png" alt="Tela de agenda do PsiControle com atendimentos e lembretes" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption>
           <strong>Agenda</strong>
           <span>Revise atendimentos, lembretes e contexto semanal.</span>
         </figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/pt-BR/patients.png" alt="Tela de pacientes do PsiControle com busca e filtros" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/pt-BR/patients.avif" type="image/avif">
+          <source srcset="../assets/img/pt-BR/patients.webp" type="image/webp">
+          <img src="../assets/img/pt-BR/patients.png" alt="Tela de pacientes do PsiControle com busca e filtros" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption>
           <strong>Pacientes</strong>
           <span>Busque, filtre e acesse cadastros com rapidez.</span>
         </figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/pt-BR/patient-detail.png" alt="Detalhes de um paciente com próximo atendimento, lembretes e recebimentos" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/pt-BR/patient-detail.avif" type="image/avif">
+          <source srcset="../assets/img/pt-BR/patient-detail.webp" type="image/webp">
+          <img src="../assets/img/pt-BR/patient-detail.png" alt="Detalhes de um paciente com próximo atendimento, lembretes e recebimentos" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption>
           <strong>Contexto do paciente</strong>
           <span>Reúna próximo atendimento, lembretes, informações e recebimentos.</span>
         </figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/pt-BR/appointment.png" alt="Formulário de novo atendimento recorrente no PsiControle" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/pt-BR/appointment.avif" type="image/avif">
+          <source srcset="../assets/img/pt-BR/appointment.webp" type="image/webp">
+          <img src="../assets/img/pt-BR/appointment.png" alt="Formulário de novo atendimento recorrente no PsiControle" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption><strong>Novo atendimento</strong><span>Crie sessões únicas ou recorrentes em poucos passos.</span></figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/pt-BR/financial.png" alt="Painel financeiro do PsiControle com valores ocultos" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/pt-BR/financial.avif" type="image/avif">
+          <source srcset="../assets/img/pt-BR/financial.webp" type="image/webp">
+          <img src="../assets/img/pt-BR/financial.png" alt="Painel financeiro do PsiControle com valores ocultos" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption><strong>Financeiro</strong><span>Filtre recebimentos e acompanhe pendências com privacidade.</span></figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/pt-BR/settings.png" alt="Ajustes de privacidade, notificações e Calendário do PsiControle" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/pt-BR/settings.avif" type="image/avif">
+          <source srcset="../assets/img/pt-BR/settings.webp" type="image/webp">
+          <img src="../assets/img/pt-BR/settings.png" alt="Ajustes de privacidade, notificações e Calendário do PsiControle" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption><strong>Privacidade</strong><span>Controle lembretes, nomes de pacientes e Calendário.</span></figcaption>
       </figure>
     </div>

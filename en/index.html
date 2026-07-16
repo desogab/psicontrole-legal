@@ -13,9 +13,9 @@
   <link rel="alternate" hreflang="en" href="../en/">
   <link rel="alternate" hreflang="pt-BR" href="../pt-BR/">
   <link rel="icon" href="../assets/img/brand/app-icon.png">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css?v=20260716">
   <script src="../assets/js/config.js" defer></script>
-  <script src="../assets/js/site.js" defer></script>
+  <script src="../assets/js/site.js?v=20260716" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#content">Skip to content</a>
@@ -69,7 +69,11 @@
 
       <div class="hero-visual" aria-label="PsiControle home screen">
         <div class="phone-frame">
-          <img src="../assets/img/en/home.png" alt="PsiControle home screen showing daily clinical routine and pending work" width="1320" height="2868">
+          <picture>
+            <source srcset="../assets/img/en/home.avif" type="image/avif">
+            <source srcset="../assets/img/en/home.webp" type="image/webp">
+            <img src="../assets/img/en/home.png" alt="PsiControle home screen showing daily clinical routine and pending work" width="1320" height="2868" decoding="async" fetchpriority="high">
+          </picture>
         </div>
       </div>
     </div>
@@ -136,7 +140,11 @@
     </div>
     <figure class="screen-figure split-media">
       <div class="phone-frame">
-        <img src="../assets/img/en/schedule.png" alt="PsiControle schedule screen with appointments and weekly context" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/en/schedule.avif" type="image/avif">
+          <source srcset="../assets/img/en/schedule.webp" type="image/webp">
+          <img src="../assets/img/en/schedule.png" alt="PsiControle schedule screen with appointments and weekly context" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
       </div>
       <figcaption class="screen-caption">
         <strong>See your schedule clearly.</strong>
@@ -158,7 +166,11 @@
     </div>
     <figure class="screen-figure split-media">
       <div class="phone-frame">
-        <img src="../assets/img/en/patients.png" alt="PsiControle patient list with filters and patient status indicators" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/en/patients.avif" type="image/avif">
+          <source srcset="../assets/img/en/patients.webp" type="image/webp">
+          <img src="../assets/img/en/patients.png" alt="PsiControle patient list with filters and patient status indicators" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
       </div>
       <figcaption class="screen-caption">
         <strong>Manage every patient clearly.</strong>
@@ -180,7 +192,11 @@
     </div>
     <figure class="screen-figure split-media">
       <div class="phone-frame">
-        <img src="../assets/img/en/financial.png" alt="PsiControle financial screen with filters, summary, and protected values" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/en/financial.avif" type="image/avif">
+          <source srcset="../assets/img/en/financial.webp" type="image/webp">
+          <img src="../assets/img/en/financial.png" alt="PsiControle financial screen with filters, summary, and protected values" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
       </div>
       <figcaption class="screen-caption">
         <strong>Understand your practice clearly.</strong>
@@ -219,45 +235,73 @@
       <p>Explore the core areas of the app: home, schedule, patients, patient context, new appointments, financial, and settings.</p>
     </div>
 
-    <div class="screenshot-gallery">
+    <div class="screenshot-gallery" tabindex="0">
       <figure class="screenshot-card">
-        <img src="../assets/img/en/home.png" alt="PsiControle home screen with today's routine and pending work" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/en/home.avif" type="image/avif">
+          <source srcset="../assets/img/en/home.webp" type="image/webp">
+          <img src="../assets/img/en/home.png" alt="PsiControle home screen with today's routine and pending work" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption>
           <strong>Home</strong>
           <span>See today's routine and pending work at a glance.</span>
         </figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/en/schedule.png" alt="PsiControle schedule screen with appointments and reminders" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/en/schedule.avif" type="image/avif">
+          <source srcset="../assets/img/en/schedule.webp" type="image/webp">
+          <img src="../assets/img/en/schedule.png" alt="PsiControle schedule screen with appointments and reminders" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption>
           <strong>Schedule</strong>
           <span>Review appointments, reminders, and weekly context.</span>
         </figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/en/patients.png" alt="PsiControle patients screen with search and filters" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/en/patients.avif" type="image/avif">
+          <source srcset="../assets/img/en/patients.webp" type="image/webp">
+          <img src="../assets/img/en/patients.png" alt="PsiControle patients screen with search and filters" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption>
           <strong>Patients</strong>
           <span>Search, filter, and access clinical records quickly.</span>
         </figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/en/patient-detail.png" alt="Patient details with next appointment, reminders, and payments" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/en/patient-detail.avif" type="image/avif">
+          <source srcset="../assets/img/en/patient-detail.webp" type="image/webp">
+          <img src="../assets/img/en/patient-detail.png" alt="Patient details with next appointment, reminders, and payments" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption>
           <strong>Patient context</strong>
           <span>Bring together the next appointment, reminders, information, and payments.</span>
         </figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/en/appointment.png" alt="New recurring appointment form in PsiControle" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/en/appointment.avif" type="image/avif">
+          <source srcset="../assets/img/en/appointment.webp" type="image/webp">
+          <img src="../assets/img/en/appointment.png" alt="New recurring appointment form in PsiControle" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption><strong>New appointment</strong><span>Create one-time or recurring sessions in a few steps.</span></figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/en/financial.png" alt="PsiControle financial screen with hidden values" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/en/financial.avif" type="image/avif">
+          <source srcset="../assets/img/en/financial.webp" type="image/webp">
+          <img src="../assets/img/en/financial.png" alt="PsiControle financial screen with hidden values" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption><strong>Financial</strong><span>Filter payments and track pending amounts with privacy.</span></figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="../assets/img/en/settings.png" alt="PsiControle privacy, notification, and Calendar settings" width="1320" height="2868" loading="lazy">
+        <picture>
+          <source srcset="../assets/img/en/settings.avif" type="image/avif">
+          <source srcset="../assets/img/en/settings.webp" type="image/webp">
+          <img src="../assets/img/en/settings.png" alt="PsiControle privacy, notification, and Calendar settings" width="1320" height="2868" loading="lazy" decoding="async">
+        </picture>
         <figcaption><strong>Privacy</strong><span>Control reminders, patient names, and Calendar integration.</span></figcaption>
       </figure>
     </div>
