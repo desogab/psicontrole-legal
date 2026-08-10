@@ -1,18 +1,21 @@
 # PsiControle Landing Page
 
-Static bilingual landing and legal site for **PsiControle**, a native iOS app for organizing patients, schedules, recurring appointments, reminders, finances, Siri/Shortcuts workflows, and optional Calendar integration.
+Static trilingual landing and legal site for **PsiControle**, a native iOS app for organizing patients, schedules, recurring appointments, reminders, finances, Siri/Shortcuts workflows, and optional Calendar integration.
 
 ## Routes
 
 | Route | Purpose |
 | --- | --- |
-| `/` | Redirects to `/pt-BR/` |
+| `/` | Redirects to the saved/browser language (Portuguese by default) |
 | `/pt-BR/` | Portuguese landing page |
 | `/en/` | English landing page |
+| `/es-ES/` | Spanish (Spain) landing page |
 | `/pt-BR/privacy.html` | Portuguese Privacy Policy |
 | `/pt-BR/terms.html` | Portuguese Terms of Use |
 | `/en/privacy.html` | English Privacy Policy |
 | `/en/terms.html` | English Terms of Use |
+| `/es-ES/privacy.html` | Spanish (Spain) Privacy Policy |
+| `/es-ES/terms.html` | Spanish (Spain) Terms of Use |
 
 ## App Store Link
 
@@ -22,7 +25,8 @@ Set the localized download URLs in one place:
 // assets/js/config.js
 window.PSICONTROLE_CONFIG = {
   APP_STORE_URL_EN: "https://apps.apple.com/us/app/psicontrole-safe-and-smooth/id6772772414",
-  APP_STORE_URL_PT_BR: "https://apps.apple.com/br/app/psicontrole-f%C3%A1cil-e-seguro/id6772772414"
+  APP_STORE_URL_PT_BR: "https://apps.apple.com/br/app/psicontrole-f%C3%A1cil-e-seguro/id6772772414",
+  APP_STORE_URL_ES_ES: "https://apps.apple.com/es/app/psicontrole/id6772772414"
 };
 ```
 

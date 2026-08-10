@@ -4,7 +4,7 @@
   const languageStorageKey = "psicontrole-language";
   const config = window.PSICONTROLE_CONFIG || {};
   const pageLanguage = String(document.documentElement.lang || "").toLowerCase();
-  const currentLanguage = pageLanguage.startsWith("pt") ? "pt-BR" : pageLanguage.startsWith("en") ? "en" : "";
+  const currentLanguage = pageLanguage.startsWith("pt") ? "pt-BR" : pageLanguage.startsWith("es") ? "es-ES" : pageLanguage.startsWith("en") ? "en" : "";
 
   if (currentLanguage) {
     try {
@@ -15,7 +15,8 @@
   }
 
   document.querySelectorAll(".lang-switch a[lang]").forEach((link) => {
-    const linkLanguage = String(link.lang || "").toLowerCase().startsWith("pt") ? "pt-BR" : "en";
+    const normalizedLinkLanguage = String(link.lang || "").toLowerCase();
+    const linkLanguage = normalizedLinkLanguage.startsWith("pt") ? "pt-BR" : normalizedLinkLanguage.startsWith("es") ? "es-ES" : "en";
 
     if (currentLanguage && linkLanguage === currentLanguage) {
       link.classList.add("lang-active");
@@ -35,7 +36,9 @@
   const appStoreUrl = String(
     currentLanguage === "pt-BR"
       ? config.APP_STORE_URL_PT_BR || fallbackUrl
-      : config.APP_STORE_URL_EN || fallbackUrl
+      : currentLanguage === "es-ES"
+        ? config.APP_STORE_URL_ES_ES || fallbackUrl
+        : config.APP_STORE_URL_EN || fallbackUrl
   ).trim();
 
   document.querySelectorAll("[data-app-store-link]").forEach((link) => {

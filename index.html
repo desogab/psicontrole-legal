@@ -30,10 +30,14 @@
 
       var target = "pt-BR/";
 
-      if (savedLanguage === "en") {
+      if (savedLanguage === "es-es") {
+        target = "es-ES/";
+      } else if (savedLanguage === "en") {
         target = "en/";
       } else if (savedLanguage === "pt-br") {
         target = "pt-BR/";
+      } else if (browserLanguage.indexOf("es") === 0) {
+        target = "es-ES/";
       } else if (browserLanguage.indexOf("en") === 0) {
         target = "en/";
       }
@@ -49,6 +53,7 @@
     <p>Escolha uma versão para abrir o site.</p>
     <div class="redirect-actions" aria-label="Idiomas disponíveis">
       <a class="button button-primary" href="pt-BR/">Português</a>
+      <a class="button button-secondary" href="es-ES/" lang="es-ES">Español (España)</a>
       <a class="button button-secondary" href="en/">English</a>
     </div>
   </main>
