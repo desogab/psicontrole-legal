@@ -39,8 +39,17 @@ The script selects the URL from the current page language. If a localized URL is
 - No frameworks.
 - No analytics.
 - No cookies.
-- GitHub Pages compatible.
+- DigitalOcean App Platform static-site compatible.
 - Responsive layout focused on iPhone/iOS presentation.
+
+## Deployment
+
+- Production: `https://psicontrole.app.br`
+- Hosting: DigitalOcean App Platform
+- Source: automatic deployments from the `main` branch
+- GitHub Pages is a legacy fallback, not the production environment. Do not use
+  its URLs in the app or App Store metadata, and do not disable it while a
+  released app version still references those URLs.
 
 ## Local Preview
 
