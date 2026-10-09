@@ -24,13 +24,13 @@ Set the localized download URLs in one place:
 ```js
 // assets/js/config.js
 window.PSICONTROLE_CONFIG = {
-  APP_STORE_URL_EN: "https://apps.apple.com/us/app/psicontrole-safe-and-smooth/id6772772414",
-  APP_STORE_URL_PT_BR: "https://apps.apple.com/br/app/psicontrole-f%C3%A1cil-e-seguro/id6772772414",
-  APP_STORE_URL_ES_ES: "https://apps.apple.com/es/app/psicontrole/id6772772414"
+  APP_STORE_URL_EN: "https://apps.apple.com/us/app/id6772772414",
+  APP_STORE_URL_PT_BR: "https://apps.apple.com/br/app/id6772772414",
+  APP_STORE_URL_ES_ES: "https://apps.apple.com/app/id6772772414"
 };
 ```
 
-The script selects the URL from the current page language. If a localized URL is empty, buttons for that page remain visible but disabled.
+Download links use the stable app ID rather than a title that can change. Portuguese uses the Brazil storefront, English uses the US storefront, and Spanish uses the international link because the Spain storefront currently returns a missing page. App availability still depends on the visitor’s App Store account region. Each download button has the same URL in its HTML so it remains usable without JavaScript. The script selects the configured URL from the current page language.
 
 ## Tech
 
