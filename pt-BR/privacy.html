@@ -36,7 +36,7 @@
 <main id="conteudo" class="legal-main">
   <div class="legal-hero">
     <h1>Política de Privacidade</h1>
-    <span class="effective-date">Data de vigência: 14 de julho de 2026</span>
+    <span class="effective-date">Data de vigência: 8 de outubro de 2026</span>
   </div>
 
   <div class="legal-card">
@@ -46,11 +46,30 @@
     </section>
 
     <section class="legal-section">
-      <h2>Dados armazenados localmente</h2>
+      <h2>Armazenamento local por padrão</h2>
       <p>O app pode armazenar informações de pacientes, atendimentos e recorrências, documentos, endereços, anotações, lembretes, recebimentos, status financeiros, configurações e outros dados administrativos criados pelo usuário.</p>
-      <p>Esses dados são armazenados localmente no dispositivo do usuário.</p>
-      <p>O app não envia esses dados para servidores externos.</p>
-      <p>O app não utiliza CloudKit.</p>
+      <p>Nas versões anteriores à 1.0.8, o PsiControle não oferece sincronização dos dados do app com o CloudKit; esses dados são armazenados localmente no dispositivo. Ao atualizar de uma dessas versões para a 1.0.8 ou posterior, os dados existentes são preservados e continuam locais até que você escolha ativar a sincronização com o iCloud. A atualização, por si só, não envia os dados ao iCloud. O app não envia esses dados para servidores controlados pelo desenvolvedor.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Sincronização opcional com iCloud e CloudKit</h2>
+      <p>A partir da versão 1.0.8, o PsiControle oferece a opção de sincronização com o iCloud. O usuário pode ativar a sincronização em Ajustes → iCloud e armazenamento, após ler e confirmar o consentimento. A ativação e a desativação dentro do app entram em vigor depois de encerrar completamente e reabrir o app.</p>
+      <p>Quando ativada, uma cópia de pacientes, atendimentos, recorrências, documentos, endereços, anotações, lembretes e registros financeiros é enviada aos serviços da Apple, no banco privado do CloudKit associado à conta iCloud do dispositivo. Registros existentes também são incluídos. Outros dispositivos com uma versão compatível do app e a mesma conta iCloud podem acessar esses dados; não há publicação no banco público nem compartilhamento entre contas pelo app.</p>
+      <p>Esse banco privado pertence à sua conta iCloud e armazena os dados do PsiControle para seu uso. O time de desenvolvimento e os demais responsáveis pelo PsiControle não têm acesso ao conteúdo desse banco privado, nem podem consultá-lo por meio das ferramentas administrativas do CloudKit. O acesso pelo app ocorre nos seus dispositivos conectados à mesma conta iCloud; outros usuários do PsiControle não têm acesso aos seus registros.</p>
+      <p>Preferências dos Ajustes, permissões do sistema e autenticação do dispositivo permanecem locais. A conta da App Store usada para assinaturas não substitui a conta iCloud utilizada para os dados.</p>
+      <p>A sincronização depende da conta, da conexão, do espaço disponível no iCloud e do agendamento do sistema. Alterações podem ficar pendentes enquanto o dispositivo está offline. A sincronização não é um backup independente: edições e exclusões também podem ser propagadas.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Proteção dos dados</h2>
+      <p>No dispositivo, o app utiliza a proteção de arquivos do iOS. No CloudKit, os campos de conteúdo dos modelos sincronizados são configurados como campos criptografados. Identificadores de registros, relações e outros metadados necessários à operação do serviço não têm a mesma classificação dos campos de conteúdo.</p>
+      <p>Dados no iCloud são criptografados em trânsito e nos servidores. Com a Proteção Avançada de Dados ativada na conta Apple, os campos e assets criptografados do CloudKit recebem proteção de ponta a ponta. Essa configuração não é obrigatória para ativar a sincronização; o app não a verifica nem a ativa. <a href="https://support.apple.com/pt-br/102651">Consulte a descrição de segurança do iCloud da Apple</a>.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Controle da sincronização e conta Apple</h2>
+      <p>Desativar a sincronização dentro do app interrompe o uso do CloudKit na próxima abertura do processo e, por si só, não apaga os registros locais ou a cópia já enviada ao iCloud. Reativar a sincronização não desfaz exclusões: alterações feitas no mesmo banco local enquanto o recurso estava desligado, incluindo exclusões, podem ser enviadas ao iCloud.</p>
+      <p>Sair da conta Apple, trocar a conta ou desativar o acesso do app ao iCloud nos Ajustes do iOS tem comportamento diferente. O mecanismo nativo pode remover a réplica local, inclusive alterações ainda não enviadas. Exporte os dados que precisar preservar antes dessas mudanças.</p>
     </section>
 
     <section class="legal-section">
@@ -84,7 +103,7 @@
       <h2>Coleta e rastreamento</h2>
       <p>O app não inclui um SDK de análise.</p>
       <p>O app não rastreia usuários entre apps e sites.</p>
-      <p>O app não compartilha dados com terceiros para publicidade, análise ou venda. Recursos opcionais iniciados pelo usuário podem fornecer dados ao iOS e aos serviços Apple necessários para Calendário, notificações, Siri, Atalhos, Spotlight, assinaturas, backups ou exportação.</p>
+      <p>O app não compartilha dados com terceiros para publicidade, análise ou venda. Recursos opcionais iniciados pelo usuário podem fornecer dados ao iOS e aos serviços Apple necessários para Calendário, notificações, Siri, Atalhos, Spotlight, assinaturas, sincronização com iCloud e CloudKit, backups ou exportação.</p>
       <p>O app não vende dados do usuário.</p>
     </section>
 
@@ -94,19 +113,21 @@
     </section>
 
     <section class="legal-section">
-      <h2>Backups do iCloud</h2>
-      <p>Os backups de dispositivos no iCloud são gerenciados pelo iOS de acordo com as configurações da conta Apple do usuário. O app não utiliza CloudKit para sincronizar dados do app.</p>
+      <h2>Backups e arquivos exportados</h2>
+      <p>Os backups do dispositivo no iCloud são gerenciados pelo iOS de acordo com as configurações da conta Apple do usuário. São separados da sincronização do app pelo CloudKit. O app não confirma a existência, integridade ou possibilidade de restauração de um backup do dispositivo.</p>
+      <p>Arquivos exportados, cópias compartilhadas e backups anteriores não são apagados pela exclusão dentro do app. O usuário controla sua retenção e remoção nos destinos escolhidos.</p>
     </section>
 
     <section class="legal-section">
       <h2>Compartilhamento de dados</h2>
-      <p>O PsiControle não envia dados de pacientes, atendimentos, documentos, endereços ou anotações para servidores controlados pelo desenvolvedor. Dados somente saem do armazenamento do app quando o usuário utiliza uma integração opcional do sistema ou exporta/compartilha um arquivo.</p>
+      <p>O PsiControle não envia dados de pacientes, atendimentos, documentos, endereços ou anotações para servidores controlados pelo desenvolvedor. Ao ativar a sincronização, o usuário autoriza o armazenamento nos serviços iCloud e CloudKit da Apple. Outras integrações opcionais e exportações fornecem dados aos serviços ou destinos selecionados pelo usuário.</p>
     </section>
 
     <section class="legal-section">
-      <h2>Exclusão de dados</h2>
-      <p>Os usuários podem excluir dados dentro do app ou apagando o app do dispositivo. Apagar o app não cancela automaticamente uma assinatura da App Store.</p>
-      <p>Para cancelar uma assinatura, os usuários devem gerenciá-la nas configurações de assinatura do seu Apple ID.</p>
+      <h2>Retenção e exclusão de dados</h2>
+      <p>Os dados permanecem no armazenamento local e, quando a sincronização é utilizada, na conta iCloud até que sejam excluídos pelo usuário ou removidos pelos mecanismos do sistema. O app não define um prazo automático de expiração para os registros clínicos e financeiros.</p>
+      <p>O usuário pode excluir registros dentro do app. Com a sincronização ativa, exclusões dos registros presentes neste dispositivo são encaminhadas ao CloudKit quando o sistema puder processá-las e podem afetar as demais cópias sincronizadas. A confirmação da exclusão local não comprova a remoção remota de todo o banco: registros ainda não importados podem permanecer. O app não oferece uma ação de apagar integralmente o banco privado remoto.</p>
+      <p>Desativar a sincronização ou remover o app não apaga automaticamente a cópia no CloudKit. Remover o app elimina seu armazenamento local, mas não os arquivos exportados, backups ou cópias externas. Apagar dados ou remover o app não cancela uma assinatura da App Store; o cancelamento é feito nos ajustes de assinaturas da conta Apple.</p>
     </section>
 
     <section class="legal-section">

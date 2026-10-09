@@ -36,7 +36,7 @@
 <main id="content" class="legal-main">
   <div class="legal-hero">
     <h1>Privacy Policy</h1>
-    <span class="effective-date">Effective Date: July 14, 2026</span>
+    <span class="effective-date">Effective Date: October 8, 2026</span>
   </div>
 
   <div class="legal-card">
@@ -46,11 +46,30 @@
     </section>
 
     <section class="legal-section">
-      <h2>Data Stored Locally</h2>
+      <h2>Local Storage by Default</h2>
       <p>The app may store patient information, appointments and recurrence data, documents, addresses, notes, reminders, receipts, financial status, settings, and other administrative data created by the user.</p>
-      <p>This data is stored locally on the user's device.</p>
-      <p>The app does not send this data to custom servers.</p>
-      <p>The app does not use CloudKit.</p>
+      <p>Versions earlier than 1.0.8 do not offer CloudKit sync for PsiControle app data; this data is stored locally on the device. When you update from one of those versions to 1.0.8 or later, your existing data is preserved and remains local until you choose to enable iCloud sync. Updating alone does not send your data to iCloud. The app does not send this data to servers controlled by the developer.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Optional iCloud and CloudKit Sync</h2>
+      <p>Starting with version 1.0.8, PsiControle offers optional iCloud sync. Users can enable sync in Settings → iCloud and storage after reading and confirming the consent. Enabling or disabling sync inside the app takes effect after fully quitting and reopening the app.</p>
+      <p>When enabled, a copy of patients, appointments, recurrence data, documents, addresses, notes, reminders, and financial records is sent to Apple services, in the private CloudKit database associated with the device’s iCloud account. Existing records are included. Other devices running a compatible app version with the same iCloud account can access this data; the app does not publish it in the public database or share it between accounts.</p>
+      <p>This private database belongs to your iCloud account and stores PsiControle data for your use. The development team and others responsible for PsiControle do not have access to its contents and cannot view them through CloudKit administration tools. Access through the app occurs on your devices signed in to the same iCloud account; other PsiControle users cannot access your records.</p>
+      <p>Settings preferences, system permissions, and device authentication remain local. The App Store account used for subscriptions does not replace the iCloud account used for data.</p>
+      <p>Sync depends on the account, connection, available iCloud storage, and system scheduling. Changes may remain pending while the device is offline. Sync is not an independent backup: edits and deletions can also propagate.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Data Protection</h2>
+      <p>On the device, the app uses iOS file protection. In CloudKit, the content fields of synced models are configured as encrypted fields. Record identifiers, relationships, and other metadata required to operate the service do not have the same classification as content fields.</p>
+      <p>iCloud data is encrypted in transit and on servers. With Advanced Data Protection enabled for the Apple account, CloudKit encrypted fields and assets receive end-to-end protection. This setting is not required to enable sync; the app does not check or enable it. <a href="https://support.apple.com/en-us/102651">Read Apple’s iCloud security description</a>.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Sync Controls and Apple Account</h2>
+      <p>Disabling sync inside the app stops CloudKit use on the next process launch and does not, by itself, delete local records or the copy already sent to iCloud. Enabling sync again does not undo deletions: changes made in the same local database while sync was off, including deletions, may be sent to iCloud.</p>
+      <p>Signing out of the Apple account, switching accounts, or disabling the app’s iCloud access in iOS Settings behaves differently. The native mechanism may remove the local replica, including changes not yet uploaded. Export data you need to keep before these changes.</p>
     </section>
 
     <section class="legal-section">
@@ -84,7 +103,7 @@
       <h2>Collection and Tracking</h2>
       <p>The app does not include an analytics SDK.</p>
       <p>The app does not track users across apps and websites.</p>
-      <p>The app does not share data with third parties for advertising, analytics, or sale. Optional features initiated by the user may provide data to iOS and the Apple services required for Calendar, notifications, Siri, Shortcuts, Spotlight, subscriptions, backups, or export.</p>
+      <p>The app does not share data with third parties for advertising, analytics, or sale. Optional features initiated by the user may provide data to iOS and the Apple services required for Calendar, notifications, Siri, Shortcuts, Spotlight, subscriptions, iCloud and CloudKit sync, backups, or export.</p>
       <p>The app does not sell user data.</p>
     </section>
 
@@ -94,19 +113,21 @@
     </section>
 
     <section class="legal-section">
-      <h2>iCloud Backups</h2>
-      <p>iCloud device backups are handled by iOS according to the user's Apple account settings. The app does not use CloudKit to sync app data.</p>
+      <h2>Backups and Exported Files</h2>
+      <p>iCloud device backups are managed by iOS according to the user’s Apple account settings. They are separate from CloudKit app sync. The app does not confirm that a device backup exists, is intact, or can be restored.</p>
+      <p>Exported files, shared copies, and earlier backups are not erased by deletion inside the app. Users control their retention and removal at the selected destinations.</p>
     </section>
 
     <section class="legal-section">
       <h2>Data Sharing</h2>
-      <p>PsiControle does not send patient, appointment, document, address, or note data to servers controlled by the developer. Data leaves the app's storage only when the user uses an optional system integration or exports/shares a file.</p>
+      <p>PsiControle does not send patient, appointment, document, address, or note data to servers controlled by the developer. Enabling sync authorizes storage in Apple’s iCloud and CloudKit services. Other optional integrations and exports provide data to services or destinations selected by the user.</p>
     </section>
 
     <section class="legal-section">
-      <h2>Data Deletion</h2>
-      <p>Users may delete data inside the app or by deleting the app from the device. Deleting the app does not automatically cancel an App Store subscription.</p>
-      <p>To cancel a subscription, users must manage it through their Apple ID subscription settings.</p>
+      <h2>Data Retention and Deletion</h2>
+      <p>Data remains in local storage and, when sync is used, in the iCloud account until users delete it or system mechanisms remove it. The app does not set an automatic expiration period for clinical and financial records.</p>
+      <p>Users can delete records inside the app. With sync active, deletions of records present on this device are forwarded to CloudKit when the system can process them and may affect other synced copies. Local deletion confirmation does not prove that the entire remote database has been erased: records not yet imported may remain. The app does not provide an action to erase the entire private remote database.</p>
+      <p>Disabling sync or removing the app does not automatically delete the CloudKit copy. Removing the app deletes its local storage, but not exported files, backups, or external copies. Deleting data or removing the app does not cancel an App Store subscription; cancellation is managed in the Apple account’s subscription settings.</p>
     </section>
 
     <section class="legal-section">
