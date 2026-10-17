@@ -42,8 +42,24 @@
   ).trim();
 
   document.querySelectorAll("[data-app-store-link]").forEach((link) => {
-    if (appStoreUrl) {
-      link.href = appStoreUrl;
+    const topic = link.dataset.productPage || "main";
+    const customUrl = (config.CPP_URLS?.[currentLanguage] || {})[topic];
+    let destination = appStoreUrl;
+    try {
+      const candidate = new URL(customUrl || appStoreUrl);
+      if (candidate.protocol === "https:" && candidate.hostname === "apps.apple.com") {
+        const provider = String(config.CAMPAIGN_PROVIDER_TOKEN || "").trim();
+        if (provider) {
+          candidate.searchParams.set("pt", provider);
+          candidate.searchParams.set("ct", `web_${config.CAMPAIGN_NAME || "main"}_${currentLanguage}_${topic}`);
+        }
+        destination = candidate.href;
+      }
+    } catch (_) {
+      // An unpublished or malformed CPP uses the ordinary localized product page.
+    }
+    if (destination) {
+      link.href = destination;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       link.removeAttribute("aria-disabled");

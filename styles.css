@@ -2030,3 +2030,19 @@ h3 {
     transition: none;
   }
 }
+/* campaign:start */
+.demo-link { color: var(--color-primary-strong); font-weight: 600; text-underline-offset: 5px; }
+.hero-actions { align-items: center; flex-wrap: wrap; }
+.demo-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 340px); align-items: center; gap: clamp(32px, 7vw, 100px); }
+.demo-copy h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; letter-spacing: -.035em; }
+.demo-copy > p { max-width: 560px; }
+.demo-steps { padding-left: 1.4em; color: var(--color-secondary); }
+.demo-steps li { padding: 8px 0; }
+.demo-note { font-size: .875rem; color: var(--color-secondary); }
+.demo-copy summary { cursor: pointer; color: var(--color-primary-strong); padding: 14px 0; }
+.product-demo { width: 100%; height: auto; border-radius: 24px; background: #111; box-shadow: var(--shadow-soft); }
+.campaign-button { display: inline-block; margin-top: 20px; padding: 13px 20px; background: var(--color-primary-strong); border-radius: 10px; color: white; font-weight: 600; text-decoration: none; }
+.campaign-button:hover { background: #224a62; }
+video:focus-visible, summary:focus-visible { outline: 3px solid #346b84; outline-offset: 5px; }
+@media (max-width: 700px) { .demo-section { grid-template-columns: minmax(0, 1fr); gap: 24px; } .product-demo { max-width: 310px; justify-self: center; } }
+/* campaign:end */
