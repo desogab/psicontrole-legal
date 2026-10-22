@@ -1,0 +1,67 @@
+/* Only legal documents load this sheet; the marketing pages keep their design. */
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #a5cbe1;
+    --color-primary-strong: #b5d9ed;
+    --color-ink: #f2f4f7;
+    --color-secondary: #c1cad4;
+    --color-background: #0f141a;
+    --color-mist: #263b49;
+    --color-surface: #1c232b;
+    --color-surface-solid: #1c232b;
+    --color-border: #465360;
+    --color-border-strong: #647b8d;
+    --shadow-card: none;
+  }
+
+  html,
+  body {
+    background: var(--color-background);
+  }
+
+  .site-header,
+  .site-header.is-scrolled,
+  .site-footer {
+    background: var(--color-background);
+    border-color: var(--color-border);
+    box-shadow: none;
+  }
+
+  .legal-card,
+  .lang-switch,
+  .nav-download,
+  code {
+    background: var(--color-surface);
+    border-color: var(--color-border);
+  }
+
+  .legal-section {
+    border-bottom-color: var(--color-border);
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline-color: var(--color-primary);
+  }
+
+  .skip-link {
+    color: var(--color-background);
+    background: var(--color-ink);
+  }
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  :root {
+    --color-ink: #ffffff;
+    --color-secondary: #e3e9ef;
+    --color-primary: #c6e7fa;
+    --color-primary-strong: #c6e7fa;
+    --color-border: #8c9aa7;
+    --color-border-strong: #8c9aa7;
+  }
+}
