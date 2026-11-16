@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://psicontrole.app.br/pt-BR/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://psicontrole.app.br/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psicontrole.app.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://psicontrole.app.br/es-ES/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psicontrole.app.br/"/>
+  </url>
+  <url>
+    <loc>https://psicontrole.app.br/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://psicontrole.app.br/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psicontrole.app.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://psicontrole.app.br/es-ES/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psicontrole.app.br/"/>
+  </url>
+  <url>
+    <loc>https://psicontrole.app.br/es-ES/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://psicontrole.app.br/pt-BR/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psicontrole.app.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://psicontrole.app.br/es-ES/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psicontrole.app.br/"/>
+  </url>
+  <url>
+    <loc>https://psicontrole.app.br/pt-BR/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://psicontrole.app.br/pt-BR/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psicontrole.app.br/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://psicontrole.app.br/es-ES/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psicontrole.app.br/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://psicontrole.app.br/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://psicontrole.app.br/pt-BR/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psicontrole.app.br/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://psicontrole.app.br/es-ES/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psicontrole.app.br/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://psicontrole.app.br/es-ES/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://psicontrole.app.br/pt-BR/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psicontrole.app.br/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://psicontrole.app.br/es-ES/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psicontrole.app.br/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://psicontrole.app.br/pt-BR/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://psicontrole.app.br/pt-BR/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psicontrole.app.br/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://psicontrole.app.br/es-ES/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psicontrole.app.br/en/terms.html"/>
+  </url>
+  <url>
+    <loc>https://psicontrole.app.br/en/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://psicontrole.app.br/pt-BR/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psicontrole.app.br/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://psicontrole.app.br/es-ES/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psicontrole.app.br/en/terms.html"/>
+  </url>
+  <url>
+    <loc>https://psicontrole.app.br/es-ES/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://psicontrole.app.br/pt-BR/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psicontrole.app.br/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://psicontrole.app.br/es-ES/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psicontrole.app.br/en/terms.html"/>
+  </url>
+</urlset>
