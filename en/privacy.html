@@ -64,8 +64,16 @@
     </section>
 
     <section class="legal-section">
+      <h2>Clinical notes</h2>
+      <p>You can create and edit clinical notes linked to patients and appointments. When syncing is enabled for the same authorized Apple Account, your notes are available on your other devices with PsiControle. Titles, formatted text, patient or appointment context, and versions stay with the note.</p>
+      <p>You can choose to use iCloud on either device. It covers all app data, including notes, without a separate permission. Valid permission already verified for the same account does not need to be granted again. Sending and receiving may take time, and available content does not guarantee that all data has arrived.</p>
+      <p>Without syncing, each device lets you write and edit notes locally without requiring an Apple Account. The libraries remain independent, and you maintain any correspondence between them. Earlier notes presented as local begin syncing only after a verified association with the account and patient; when the association is uncertain, you must make a choice. Matching names are not enough to associate records. Originals, their versions, and local keys are preserved.</p>
+      <p>Local saving does not depend on an upload finishing. Concurrent edits preserve alternatives and versions; when they cannot be combined safely, the app asks you to compare and choose. Changes and deletions may reach other authorized devices. Changing accounts hides content bound to the previous account; independent local work remains available.</p>
+    </section>
+
+    <section class="legal-section">
       <h2>How Your Data Is Protected</h2>
-      <p>Data saved on your device uses iOS protection. Data sent to iCloud is protected by encryption while being sent and while stored by Apple.</p>
+      <p>Data saved on your device uses iOS protection. In versions with unified notes, the local notes library is also encrypted with a system-protected, device-only key; that key is not synced. Data sent to iCloud is protected by encryption while being sent and while stored by Apple.</p>
       <p>For extra protection of synced content, you can enable Advanced Data Protection in your Apple Account settings. It provides end-to-end protection: only your trusted devices can read this content. Apple cannot read it. PsiControle does not check or enable this option, and it is not required to use syncing.</p>
       <p>Apple also keeps information needed for syncing to work, such as record identifiers and the connections between records. This operational information does not have the same end-to-end protection applied to the content.</p>
       <p><a href="https://support.apple.com/102651">Learn how Apple protects iCloud data</a>.</p>
@@ -80,8 +88,9 @@
 
     <section class="legal-section">
       <h2>Importing and Exporting Data</h2>
-      <p>You can import records from a CSV file, a spreadsheet format. The file is read on your device and may include names, contact details, record status, notes, document information, and addresses.</p>
-      <p>You can also export data in the formats offered by the app. The file is created on your device and sent only to the location or service you choose in iOS sharing options. After that, its protection and storage depend on that destination.</p>
+      <p>You can import records from a CSV file, a spreadsheet format. The file is read on your device and may include names, contact details, record status, document information, and addresses. In versions with unified notes, this importer accepts registration details only: notes or observations columns do not populate clinical notes.</p>
+      <p>You can also export data in the formats offered by the app. The file is created on your device and sent only to the location or service you choose in the device’s sharing or save options. After that, its protection and storage depend on that destination.</p>
+      <p>In versions with unified notes, individual and all-patient data exports include the clinical notes and versions available in the selected, authorized library, with their content and context. These files provide access to your data; they are not a notes restoration or syncing mechanism. Creating them does not prove that all changes from other devices have arrived.</p>
     </section>
 
     <section class="legal-section">
@@ -129,11 +138,11 @@
     <section class="legal-section">
       <h2>Keeping or Deleting Your Data</h2>
       <p>Clinical and financial records are not automatically deleted after a set period. They stay on the device and, if you use syncing, in iCloud until you delete them or a system action removes them.</p>
-      <p>You can delete records inside the app. With syncing on, these deletions are also sent to iCloud and your other devices when possible. Deleting a record on this device does not mean deleting all app data in iCloud: some data may not have reached this device yet.</p>
+      <p>On iPhone, you can delete records inside the app. With syncing on, these deletions are also sent to iCloud and your other devices when possible. Deleting a record on this device does not mean deleting all app data in iCloud: some data may not have reached this device yet.</p>
       <p>PsiControle offers optional iCloud syncing. To manage or delete data saved in the cloud, use your Apple Account settings: tap your name, then iCloud and the storage section; look for PsiControle and review the options provided by the system. Names and options may vary by system version.</p>
       <p>Before deleting, export a copy of important data and turn off PsiControle syncing on all devices. Close and reopen the app on each one. Deletion through Apple Settings can affect data on connected devices and cannot be undone. PsiControle does not guarantee that a local copy will be kept. If syncing resumes, data still on other devices may be uploaded to iCloud again.</p>
       <p><a href="https://support.apple.com/guide/icloud/mm62d92d6b3e/icloud">See Apple’s guidance on app data</a>. Exported files and independent backups are separate copies and must be managed where they were saved.</p>
-      <p>Turning off syncing or removing the app does not automatically delete data saved in iCloud. Removing the app deletes the data it keeps on this device, but not exported files, backups, or external copies.</p>
+      <p>Turning off syncing or removing the app does not automatically delete data saved in iCloud. On iPhone, deleting the app removes its local data; offloading it while keeping documents and data is a different option. Exported files, backups, and external copies must be managed separately.</p>
       <p>Deleting data or removing the app does not cancel your subscription. Cancellation is managed in your Apple Account’s subscription settings.</p>
     </section>
 
