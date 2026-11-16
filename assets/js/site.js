@@ -73,50 +73,41 @@
     link.addEventListener("click", (event) => event.preventDefault());
   });
 
-  const header = document.querySelector(".site-header");
+  // Feature tour: on phones the panels swipe horizontally. The tabs are plain anchors (they work without
+  // script); here they scroll the track instead of the page and follow the panel in view.
+  const track = document.querySelector(".tour-track");
+  const tabs = Array.from(document.querySelectorAll(".tour-tabs a"));
 
-  if (header) {
-    const updateHeaderState = () => {
-      header.classList.toggle("is-scrolled", window.scrollY > 8);
+  if (track && tabs.length) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const panelFor = (tab) => document.getElementById(tab.hash.slice(1));
+    const setCurrent = (id) => {
+      tabs.forEach((tab) => {
+        if (tab.hash === `#${id}`) tab.setAttribute("aria-current", "true");
+        else tab.removeAttribute("aria-current");
+      });
     };
 
-    updateHeaderState();
-    window.addEventListener("scroll", updateHeaderState, { passive: true });
-  }
-
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  // The hero is never hidden: it is the first paint and must render without waiting for script.
-  const revealGroups = [
-    ".trust-item",
-    ".section-heading",
-    ".feature-card",
-    ".split-copy",
-    ".split-media",
-    ".privacy-point",
-    ".screenshot-card",
-    ".final-cta-inner"
-  ];
-  const revealItems = Array.from(document.querySelectorAll(revealGroups.join(",")));
-
-  if (!reduceMotion && "IntersectionObserver" in window && revealItems.length) {
-    revealItems.forEach((item, index) => {
-      item.classList.add("reveal");
-      item.style.setProperty("--reveal-delay", `${(index % 4) * 55}ms`);
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", (event) => {
+        const panel = panelFor(tab);
+        if (!panel || track.scrollWidth <= track.clientWidth) return;
+        event.preventDefault();
+        track.scrollTo({ left: panel.offsetLeft - track.offsetLeft, behavior: reduceMotion ? "auto" : "smooth" });
+        setCurrent(panel.id);
+      });
     });
 
-    document.documentElement.classList.add("motion-ready");
-
-    const revealObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("reveal-visible");
-          observer.unobserve(entry.target);
-        });
-      },
-      { rootMargin: "0px 0px -8%", threshold: 0.12 }
-    );
-
-    revealItems.forEach((item) => revealObserver.observe(item));
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) setCurrent(entry.target.id);
+          });
+        },
+        { root: track, threshold: 0.6 }
+      );
+      tabs.map(panelFor).filter(Boolean).forEach((panel) => observer.observe(panel));
+    }
   }
 })();
