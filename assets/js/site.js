@@ -85,9 +85,8 @@
   }
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // The hero is never hidden: it is the first paint and must render without waiting for script.
   const revealGroups = [
-    ".hero-copy > *",
-    ".hero-visual",
     ".trust-item",
     ".section-heading",
     ".feature-card",
