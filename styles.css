@@ -1,22 +1,30 @@
 /* PsiControle site — one stylesheet for the landings, legal pages and the language chooser.
    Mobile first: base rules target phones; min-width queries add room for tablets and desktops. */
 
+/* Design tokens. Brand colors mirror the app's asset catalog, the same source as
+   psicontrole-motion/src/brand.ts (teal, ink, mist, sage, background). Change them there first. */
 :root {
-  --color-primary: #346b84;
+  --color-primary: #346b84; /* brand teal */
   --color-primary-strong: #254f69;
-  --color-ink: #14212c;
-  --color-secondary: #526676;
-  --color-background: #f5f7f8;
+  --color-ink: #17212b; /* brand ink */
+  --color-secondary: #526879; /* motion secondaryText */
+  --color-background: #f7f8fa; /* brand background */
   --color-surface: #ffffff;
-  --color-mist: #eaf2f5;
-  --color-sage: #c7dbd2;
-  --color-border: rgba(20, 33, 44, 0.1);
+  --color-mist: #eaf2f5; /* brand mist */
+  --color-sage: #c7dbd2; /* brand sage */
+  --color-border: rgba(23, 33, 43, 0.1);
   --color-border-strong: rgba(52, 107, 132, 0.28);
-  --shadow-card: 0 1px 2px rgba(20, 33, 44, 0.04), 0 8px 24px rgba(24, 53, 68, 0.06);
-  --shadow-phone: 0 24px 56px rgba(24, 53, 68, 0.18);
-  --radius-small: 12px;
-  --radius: 18px;
-  --radius-large: 28px;
+  --shadow-card: 0 1px 2px rgba(23, 33, 43, 0.04), 0 8px 24px rgba(23, 33, 43, 0.06);
+  --shadow-phone: 0 20px 48px rgba(23, 33, 43, 0.16);
+
+  /* Three corner sizes: controls, cards, and the device frame (its screen is the frame minus its padding). */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-device: 36px;
+  --device-padding: 8px;
+
+  --space-section: 48px;
+  --space-head: 20px;
   --max-width: 1180px;
   --gutter: 20px;
   --header-height: 60px;
@@ -117,7 +125,7 @@ summary:focus-visible,
   z-index: 30;
   transform: translateY(-160%);
   padding: 10px 14px;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   color: #fff;
   background: var(--color-ink);
   text-decoration: none;
@@ -175,7 +183,7 @@ summary:focus-visible,
   flex-shrink: 0;
   width: 34px;
   height: 34px;
-  border-radius: 9px;
+  border-radius: var(--radius-sm);
 }
 
 .brand-link {
@@ -216,7 +224,7 @@ summary:focus-visible,
   align-items: center;
   min-height: 36px;
   padding: 0 14px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   color: #fff;
   background: var(--color-primary-strong);
   font-weight: 650;
@@ -231,13 +239,13 @@ summary:focus-visible,
   display: flex;
   gap: 2px;
   padding: 3px;
-  border-radius: 10px;
-  background: rgba(20, 33, 44, 0.06);
+  border-radius: var(--radius-sm);
+  background: rgba(23, 33, 43, 0.06);
 }
 
 .lang-switch a {
   padding: 5px 7px;
-  border-radius: 7px;
+  border-radius: calc(var(--radius-sm) - 3px);
   color: var(--color-secondary);
   text-decoration: none;
   font-size: 0.75rem;
@@ -264,7 +272,7 @@ summary:focus-visible,
   gap: 10px;
   min-height: 56px;
   padding: 8px 22px 8px 18px;
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   color: #fff;
   background: #000;
   text-decoration: none;
@@ -305,7 +313,7 @@ summary:focus-visible,
   justify-content: center;
   padding: 12px 18px;
   border: 1px solid transparent;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-sm);
   text-decoration: none;
   font-size: 0.98rem;
   font-weight: 650;
@@ -344,13 +352,14 @@ summary:focus-visible,
 
 /* ---------- Sections ---------- */
 
+/* Sections pad only their top, so the gap between two sections is one --space-section, not two. */
 .section {
-  padding: 64px 0;
+  padding-top: var(--space-section);
 }
 
 .section-head {
   max-width: 640px;
-  margin-bottom: 28px;
+  margin-bottom: var(--space-head);
 }
 
 .section-head p {
@@ -418,33 +427,6 @@ summary:focus-visible,
   margin-top: 26px;
 }
 
-.facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 16px;
-  margin-top: 20px;
-  padding: 0;
-  list-style: none;
-  color: var(--color-secondary);
-  font-size: 0.88rem;
-  font-weight: 550;
-}
-
-.facts li {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.facts li::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-primary);
-  opacity: 0.55;
-}
-
 .hero-device {
   justify-self: center;
   width: min(100%, 330px);
@@ -468,180 +450,115 @@ summary:focus-visible,
 }
 
 .phone {
-  padding: 10px;
+  padding: var(--device-padding);
   border: 1px solid var(--color-border);
-  border-radius: 40px;
+  border-radius: var(--radius-device);
   background: var(--color-surface);
   box-shadow: var(--shadow-phone);
 }
 
-.phone img {
+.phone img,
+.phone video {
+  display: block;
   width: 100%;
-  border-radius: 31px;
+  --screen-radius: calc(var(--radius-device) - var(--device-padding));
+  border-radius: var(--screen-radius);
 }
 
-/* ---------- Feature tour ---------- */
+/* ---------- Workflows ----------
+   Three moments of an appointment. Each is text plus one phone, cropped to the top of the screen.
+   The phone slot can hold an <img> or a muted looping <video> from psicontrole-motion. */
 
-.tour-tabs {
-  display: flex;
-  gap: 2px;
-  margin-bottom: 18px;
-  padding: 3px;
-  border-radius: 12px;
-  background: rgba(20, 33, 44, 0.06);
-}
-
-.tour-tabs a {
-  flex: 1;
-  padding: 8px 4px;
-  border-radius: 9px;
-  color: var(--color-secondary);
-  text-align: center;
-  text-decoration: none;
-  font-size: 0.86rem;
-  font-weight: 650;
-}
-
-.tour-tabs a[aria-current="true"] {
-  color: var(--color-ink);
-  background: var(--color-surface);
-  box-shadow: 0 1px 3px rgba(20, 33, 44, 0.12);
-}
-
-.tour-track {
+.flow {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 86%;
-  gap: 14px;
-  margin: 0 calc(var(--gutter) * -1);
-  padding: 4px var(--gutter) 12px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 0 var(--gutter);
-  scrollbar-width: none;
-  overscroll-behavior-x: contain;
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid var(--color-border);
 }
 
-.tour-track::-webkit-scrollbar {
-  display: none;
+.flow:last-child {
+  padding-bottom: 0;
 }
 
-.tour-panel {
-  display: flex;
-  flex-direction: column;
-  scroll-snap-align: start;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-large);
-  background: var(--color-surface);
-  box-shadow: var(--shadow-card);
-}
-
-.tour-text {
-  padding: 22px 22px 18px;
-}
-
-.tour-text ul {
-  margin-top: 12px;
-  padding: 0;
-  list-style: none;
-  color: var(--color-secondary);
-  font-size: 0.95rem;
-}
-
-.tour-text li {
-  position: relative;
-  padding-left: 18px;
-}
-
-.tour-text li + li {
-  margin-top: 6px;
-}
-
-.tour-text li::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 0.62em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-primary);
-}
-
-/* The screenshot sits at the bottom of the card, cropped to its top half. */
-.tour-shot {
-  margin-top: auto;
-  padding: 0 22px;
-  background: linear-gradient(180deg, var(--color-surface), var(--color-mist));
-}
-
-.tour-shot img {
-  height: 380px;
-  width: 100%;
-  object-fit: cover;
-  object-position: top;
-  border: 1px solid var(--color-border);
-  border-bottom: 0;
-  border-radius: 26px 26px 0 0;
-}
-
-.works-with {
-  margin-top: 22px;
-  color: var(--color-secondary);
-  font-size: 0.95rem;
-}
-
-.works-with strong {
-  color: var(--color-ink);
+.flow-eyebrow {
+  margin-bottom: 6px;
+  color: var(--color-primary);
+  font-size: 0.82rem;
   font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-/* ---------- Demo ---------- */
-
-.demo {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 112px;
-  gap: 16px;
-  align-items: center;
-  padding: 18px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-large);
-  background: var(--color-surface);
-}
-
-.demo h2 {
-  font-size: 1.3rem;
+.flow h3 {
+  font-size: clamp(1.35rem, 5.4vw, 1.75rem);
+  line-height: 1.15;
   letter-spacing: -0.025em;
 }
 
-.demo p {
-  margin-top: 6px;
+/* Numbered steps share the motion notices' numbered marker. */
+.flow-steps {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
   color: var(--color-secondary);
-  font-size: 0.92rem;
-  line-height: 1.45;
 }
 
-.demo .demo-note {
-  font-size: 0.82rem;
+.flow-steps li {
+  position: relative;
+  padding-left: 36px;
+  counter-increment: step;
 }
 
-.demo details {
-  margin-top: 10px;
-  color: var(--color-secondary);
-  font-size: 0.88rem;
+.flow-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
-.demo summary {
-  cursor: pointer;
-  color: var(--color-primary-strong);
-  font-weight: 600;
+.flow-steps strong {
+  color: var(--color-ink);
+  font-weight: 650;
 }
 
-.product-demo {
+.flow-media {
+  justify-self: center;
+  width: min(100%, 260px);
+}
+
+/* A phone cut off at the bottom: only the top of the screen shows. */
+.phone-crop {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-bottom: 0;
+  box-shadow: none;
+  background: var(--color-surface);
+  -webkit-mask-image: linear-gradient(180deg, #000 75%, transparent);
+  mask-image: linear-gradient(180deg, #000 75%, transparent);
+}
+
+.phone-crop img,
+.phone-crop video {
   width: 100%;
-  border-radius: 18px;
-  background: var(--color-ink);
+  height: 360px;
+  object-fit: cover;
+  object-position: top;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  clip-path: inset(0 round var(--screen-radius) var(--screen-radius) 0 0);
 }
 
 /* ---------- Privacy ---------- */
@@ -672,7 +589,7 @@ summary:focus-visible,
   place-items: center;
   width: 40px;
   height: 40px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   color: var(--color-primary-strong);
   background: var(--color-mist);
 }
@@ -750,13 +667,10 @@ summary:focus-visible,
 
 /* ---------- Final call to action ---------- */
 
+/* A full-width band that closes the page: centered on phones, a text-and-button row on wider screens. */
 .final-cta {
-  padding: 0 0 64px;
-}
-
-.final-cta-card {
-  padding: 40px 24px;
-  border-radius: var(--radius-large);
+  margin-top: var(--space-section);
+  padding: 48px 0;
   color: #fff;
   background: var(--color-primary-strong);
   text-align: center;
@@ -790,13 +704,17 @@ summary:focus-visible,
   margin: 0 auto;
   padding: 0 var(--gutter);
   display: grid;
+  justify-items: center;
   gap: 16px;
+  text-align: center;
 }
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 18px;
+  justify-content: center;
+  gap: 8px 16px;
+  font-size: 0.875rem;
 }
 
 .footer-links a {
@@ -855,7 +773,7 @@ summary:focus-visible,
 .legal-card {
   padding: 20px;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-md);
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
 }
@@ -922,7 +840,7 @@ summary:focus-visible,
   width: min(100%, 440px);
   padding: 28px;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-md);
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
   text-align: center;
@@ -960,28 +878,34 @@ summary:focus-visible,
     --header-height: 68px;
   }
 
-  .section {
-    padding: 96px 0;
+  :root {
+    --space-section: 80px;
+    --space-head: 28px;
   }
 
-  .tour-track {
-    grid-auto-columns: 46%;
+  /* Text and phone side by side; the middle workflow mirrors so the page reads in a zigzag. */
+  .flow {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: center;
+    gap: 56px;
+    padding: 48px 0 0;
   }
 
-  .demo {
-    max-width: 760px;
-    margin: 0 auto;
-    grid-template-columns: 180px minmax(0, 1fr);
-    gap: 40px;
-    padding: 28px 40px 28px 28px;
+  .flow:nth-of-type(even) {
+    grid-template-columns: 280px minmax(0, 1fr);
   }
 
-  .demo .product-demo {
+  .flow:nth-of-type(even) .flow-media {
     order: -1;
   }
 
-  .demo h2 {
-    font-size: 1.9rem;
+  .flow-media {
+    width: 280px;
+  }
+
+  .flow-text {
+    max-width: 520px;
+    padding-bottom: 48px;
   }
 
   .privacy-list {
@@ -993,18 +917,42 @@ summary:focus-visible,
     grid-template-columns: 1fr;
   }
 
+  .final-cta {
+    padding: 64px 0;
+    text-align: left;
+  }
+
+  .final-cta-card h2 {
+    margin: 0;
+  }
+
   .final-cta-card {
-    padding: 64px 40px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 32px;
+  }
+
+  .final-cta-card .app-store-badge {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin-top: 0;
   }
 
   .footer-inner {
     grid-template-columns: auto 1fr;
     align-items: center;
+    justify-items: stretch;
+    text-align: left;
   }
 
   .footer-meta {
     justify-items: end;
     text-align: right;
+  }
+
+  .footer-links {
+    justify-content: flex-end;
   }
 
   .legal-card {
@@ -1044,29 +992,22 @@ summary:focus-visible,
     height: 560px;
   }
 
-  /* Desktop shows all four panels side by side; the tabs are only for swiping. */
-  .tour-tabs {
-    display: none;
+  .flow {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 96px;
   }
 
-  .tour-track {
-    grid-auto-flow: row;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin: 0;
-    padding: 0;
-    overflow: visible;
+  .flow:nth-of-type(even) {
+    grid-template-columns: 300px minmax(0, 1fr);
   }
 
-  .tour-shot {
-    padding: 0 18px;
+  .flow-media {
+    width: 300px;
   }
 
-  .tour-text {
-    padding: 22px 20px 18px;
-  }
-
-  .tour-shot img {
-    height: 340px;
+  .phone-crop img,
+  .phone-crop video {
+    height: 400px;
   }
 }
 
@@ -1080,4 +1021,9 @@ summary:focus-visible,
   *::after {
     transition: none !important;
   }
+}
+
+/* The landing's teal band already separates the footer. */
+main:has(.final-cta) + .site-footer {
+  border-top: 0;
 }

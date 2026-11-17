@@ -69,11 +69,9 @@ desogab@icloud.com
 <!-- campaign:start -->
 ## Marketing campaign
 
-The `rotina-sob-controle-v1` campaign includes a recorded app demonstration in `assets/video/{pt-BR,en,es-ES}/`. The website remains static, without third-party video embeds or tracking scripts. Videos use `preload="none"` and require a visitor action to play; each locale includes a transcript and a captions file.
+The `rotina-sob-controle-v1` campaign presents three workflows (before the session, after it, at the end of the month) instead of a recorded demo. Each workflow is HTML text plus one silent looping clip in a phone frame: `assets/video/<locale>/{before,after,month}.mp4` with a `.webp` poster (the first frame). The clips play only while visible and stay on the poster with reduced motion. They are rendered by the `psicontrole-motion` Remotion project (`Site-*` compositions, `npm run render:site`) from real screens captured with fictional data; see its `capture/README.md`. The website remains static, without third-party video embeds or tracking scripts.
 
 Set real, approved custom product page URLs in `assets/js/config.js` under `CPP_URLS`. Empty or invalid custom URLs fall back to the localized default page. Set `CAMPAIGN_PROVIDER_TOKEN` only to the real provider token from App Store Connect to enable campaign attribution. No tokens or page IDs are invented.
-
-To update the demonstration, replace each locale's `demo.mp4`, `poster.jpg`, and `captions.vtt` together, then align the transcript in the corresponding landing page. Use authorized app recordings with fictional data, preserve the iPhone interface, and review the local preview before committing.
 
 Pushing `feature/static-website` updates the review branch. Merging its pull request into `main` triggers the existing DigitalOcean deployment.
 <!-- campaign:end -->

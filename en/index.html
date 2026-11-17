@@ -24,14 +24,14 @@
   <meta property="og:locale:alternate" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="apple-itunes-app" content="app-id=6772772414">
-  <meta name="theme-color" content="#f5f7f8">
+  <meta name="theme-color" content="#f7f8fa">
   <link rel="icon" href="../assets/img/brand/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="../assets/img/brand/apple-touch-icon.png">
   <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/img/en/home-660.avif 660w, ../assets/img/en/home.avif 1320w" imagesizes="(min-width: 900px) 340px, 310px" fetchpriority="high">
   <link rel="preload" as="image" type="image/avif" href="../assets/img/brand/onboarding-hero.avif">
-  <link rel="stylesheet" href="../styles.css?v=20261116">
+  <link rel="stylesheet" href="../styles.css?v=20261116e">
   <script src="../assets/js/config.js" defer></script>
-  <script src="../assets/js/site.js?v=20261116" defer></script>
+  <script src="../assets/js/site.js?v=20261116e" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "@id": "https://psicontrole.app.br/#app", "name": "PsiControle", "operatingSystem": "iOS, macOS", "applicationCategory": "BusinessApplication", "description": "Schedule, patients, clinical notes and payments for therapists and psychologists. Data stays on your device; iCloud sync across iPhone and Mac is optional.", "url": "https://psicontrole.app.br/en/", "downloadUrl": "https://apps.apple.com/us/app/id6772772414", "installUrl": "https://apps.apple.com/us/app/id6772772414", "image": "https://psicontrole.app.br/assets/img/brand/app-icon.png", "inLanguage": ["pt-BR", "en", "es-ES"], "publisher": {"@id": "https://psicontrole.app.br/#org"}}, {"@type": "Organization", "@id": "https://psicontrole.app.br/#org", "name": "PsiControle", "url": "https://psicontrole.app.br/", "logo": "https://psicontrole.app.br/assets/img/brand/app-icon.png"}, {"@type": "WebSite", "@id": "https://psicontrole.app.br/#site", "name": "PsiControle", "url": "https://psicontrole.app.br/", "inLanguage": "en", "publisher": {"@id": "https://psicontrole.app.br/#org"}}, {"@type": "FAQPage", "@id": "https://psicontrole.app.br/en/#faq", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Do I need to pay to use it?", "acceptedAnswer": {"@type": "Answer", "text": "Creating and editing records requires a trial period or a subscription bought through the App Store. When a free trial is available, its length is shown before you buy. If access ends, the app may keep your data available to view and export."}}, {"@type": "Question", "name": "Where is my patients' data stored?", "acceptedAnswer": {"@type": "Answer", "text": "On your device. Nothing is sent to PsiControle servers. If you turn on iCloud, the data is also stored in the private area of your Apple account, which the team can't read."}}, {"@type": "Question", "name": "Does it work on iPhone and Mac?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Turn on iCloud with the same Apple Account on both devices to see your schedule, patients, notes and payments on each."}}, {"@type": "Question", "name": "Does it work offline?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You keep using your data on the device. With iCloud on, changes are sent when you're back online."}}, {"@type": "Question", "name": "Can I bring my patients over from a spreadsheet?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with a CSV file. It's read on your device and brings in name, contact details, record status, document and address."}}, {"@type": "Question", "name": "Do patient names show up in Calendar or notifications?", "acceptedAnswer": {"@type": "Answer", "text": "No, unless you allow it. By default, events and notifications use neutral text, without names, phone numbers or notes."}}]}]}</script>
 </head>
 <body>
@@ -70,9 +70,8 @@
             <span class="app-store-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16.63 12.67c-.02-2.1 1.72-3.12 1.8-3.17-1-.95-2.54-1.08-3.08-1.1-1.3-.14-2.56.77-3.22.77-.67 0-1.69-.75-2.78-.73-1.43.02-2.75.83-3.49 2.1-1.49 2.58-.38 6.38 1.05 8.47.72 1.02 1.56 2.16 2.67 2.12 1.08-.04 1.48-.68 2.78-.68 1.29 0 1.66.68 2.79.66 1.16-.02 1.89-1.03 2.58-2.06.83-1.18 1.16-2.35 1.17-2.41-.03-.01-2.25-.86-2.27-3.97ZM14.5 7.02c.58-.72.98-1.7.87-2.7-.85.04-1.9.58-2.51 1.28-.54.63-1.03 1.66-.9 2.63.96.07 1.94-.49 2.54-1.21Z"/></svg></span>
             <span class="app-store-copy"><span class="app-store-preline">Download on the</span><span class="app-store-store">App Store</span></span>
           </a>
-          <a class="text-link" href="#demo">Watch the 25-second demo</a>
+          <a class="text-link" href="#features">See how it works</a>
         </div>
-        <ul class="facts"><li>Data on your device</li><li>Optional iCloud</li><li>Siri and Shortcuts</li></ul>
       </div>
       <div class="hero-device">
         <div class="phone">
@@ -86,89 +85,54 @@
     </div>
   </section>
 
-  <section id="features" class="section tour" aria-labelledby="tour-title">
+  <section id="features" class="section flows" aria-labelledby="flows-title">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="tour-title">From the schedule to the payment, in one place.</h2>
-        <p>Four areas that follow every appointment, from booking to payment.</p>
+        <h2 id="flows-title">From the schedule to the payment, in one place.</h2>
+        <p>How PsiControle follows each appointment: before, after and at the end of the month.</p>
       </div>
-      <nav class="tour-tabs" aria-label="App areas">
-        <a href="#schedule" aria-current="true">Schedule</a>
-        <a href="#patients">Patients</a>
-        <a href="#notes">Notes</a>
-        <a href="#payments">Payments</a>
-      </nav>
-      <div class="tour-track">
-      <article class="tour-panel" id="schedule" aria-labelledby="schedule-title">
-        <div class="tour-text">
-          <h3 id="schedule-title">A schedule built for recurring sessions</h3>
-          <ul><li>Day, week and month views.</li><li>Weekly, biweekly or monthly sessions, or series with no end date.</li><li>Calendar and reminders without patient names, unless you allow them.</li></ul>
+      <article class="flow" id="schedule" aria-labelledby="schedule-title">
+        <div class="flow-text">
+          <p class="flow-eyebrow">Before the session</p>
+          <h3 id="schedule-title">From new patient to recurring schedule</h3>
+          <ol class="flow-steps"><li><strong>Add the patient</strong> or import your list from a CSV spreadsheet.</li><li><strong>Schedule the series</strong>: weekly, biweekly, monthly or with no end date.</li><li><strong>See the day, week or month.</strong> In Calendar, the event uses neutral text, without the patient&#x27;s name.</li></ol>
         </div>
-        <figure class="tour-shot">
-        <picture>
-          <source srcset="../assets/img/en/schedule-660.avif 660w, ../assets/img/en/schedule.avif 1320w" sizes="(min-width: 900px) 240px, 76vw" type="image/avif">
-          <source srcset="../assets/img/en/schedule-660.webp 660w, ../assets/img/en/schedule.webp 1320w" sizes="(min-width: 900px) 240px, 76vw" type="image/webp">
-          <img src="../assets/img/en/schedule.png" alt="PsiControle schedule with today&#x27;s appointments and expected income" width="1320" height="2868" loading="lazy" decoding="async">
-        </picture>
-        </figure>
-      </article>
-      <article class="tour-panel" id="patients" aria-labelledby="patients-title">
-        <div class="tour-text">
-          <h3 id="patients-title">Every patient on one record</h3>
-          <ul><li>Contact details, documents and address.</li><li>Next appointment, reminders and payments on the same screen.</li><li>CSV import and export, processed on your device.</li></ul>
+        <div class="flow-media">
+          <div class="phone phone-crop">
+          <video data-flow-clip muted loop playsinline preload="none" width="660" height="1434" poster="../assets/video/en/before.webp" aria-label="PsiControle demo: adding a patient and scheduling a weekly series with no end date">
+            <source src="../assets/video/en/before.mp4" type="video/mp4">
+          </video>
+          </div>
         </div>
-        <figure class="tour-shot">
-        <picture>
-          <source srcset="../assets/img/en/patient-detail-660.avif 660w, ../assets/img/en/patient-detail.avif 1320w" sizes="(min-width: 900px) 240px, 76vw" type="image/avif">
-          <source srcset="../assets/img/en/patient-detail-660.webp 660w, ../assets/img/en/patient-detail.webp 1320w" sizes="(min-width: 900px) 240px, 76vw" type="image/webp">
-          <img src="../assets/img/en/patient-detail.png" alt="Patient record with the next appointment, note history and payments" width="1320" height="2868" loading="lazy" decoding="async">
-        </picture>
-        </figure>
       </article>
-      <article class="tour-panel" id="notes" aria-labelledby="notes-title">
-        <div class="tour-text">
-          <h3 id="notes-title">Clinical notes tied to each session</h3>
-          <ul><li>Every note is linked to the patient and the appointment.</li><li>Earlier versions are kept with the note.</li><li>On iPhone and Mac through your iCloud, if you turn it on.</li></ul>
+      <article class="flow" id="notes" aria-labelledby="notes-title">
+        <div class="flow-text">
+          <p class="flow-eyebrow">After the session</p>
+          <h3 id="notes-title">Clinical notes tied to the appointment</h3>
+          <ol class="flow-steps"><li><strong>Write the session note.</strong> It&#x27;s linked to the patient and the appointment.</li><li><strong>Review the history</strong> on the patient record, next to the upcoming appointment and payments.</li><li><strong>Earlier versions are kept</strong> with the note.</li></ol>
         </div>
-        <figure class="tour-shot">
-        <picture>
-          <source srcset="../assets/img/en/note-editor-660.avif 660w, ../assets/img/en/note-editor.avif 1320w" sizes="(min-width: 900px) 240px, 76vw" type="image/avif">
-          <source srcset="../assets/img/en/note-editor-660.webp 660w, ../assets/img/en/note-editor.webp 1320w" sizes="(min-width: 900px) 240px, 76vw" type="image/webp">
-          <img src="../assets/img/en/note-editor.png" alt="PsiControle clinical note editor with a fictional session note" width="1320" height="2868" loading="lazy" decoding="async">
-        </picture>
-        </figure>
+        <div class="flow-media">
+          <div class="phone phone-crop">
+          <video data-flow-clip muted loop playsinline preload="none" width="660" height="1434" poster="../assets/video/en/after.webp" aria-label="PsiControle demo: a patient record, the notes list, and a session note written and saved">
+            <source src="../assets/video/en/after.mp4" type="video/mp4">
+          </video>
+          </div>
+        </div>
       </article>
-      <article class="tour-panel" id="payments" aria-labelledby="payments-title">
-        <div class="tour-text">
+      <article class="flow" id="payments" aria-labelledby="payments-title">
+        <div class="flow-text">
+          <p class="flow-eyebrow">At the end of the month</p>
           <h3 id="payments-title">Payments without spreadsheets</h3>
-          <ul><li>Received and pending by period, patient and payment method.</li><li>Period revenue and average per appointment.</li><li>Amounts hidden when financial privacy is on.</li></ul>
+          <ol class="flow-steps"><li><strong>See what&#x27;s received and pending</strong> by period, patient and payment method.</li><li><strong>Record a payment</strong> in the app, with Siri or with Shortcuts.</li><li><strong>Hide amounts</strong> when financial privacy is on.</li></ol>
         </div>
-        <figure class="tour-shot">
-        <picture>
-          <source srcset="../assets/img/en/financial-660.avif 660w, ../assets/img/en/financial.avif 1320w" sizes="(min-width: 900px) 240px, 76vw" type="image/avif">
-          <source srcset="../assets/img/en/financial-660.webp 660w, ../assets/img/en/financial.webp 1320w" sizes="(min-width: 900px) 240px, 76vw" type="image/webp">
-          <img src="../assets/img/en/financial.png" alt="PsiControle financial screen with filters and the period summary" width="1320" height="2868" loading="lazy" decoding="async">
-        </picture>
-        </figure>
+        <div class="flow-media">
+          <div class="phone phone-crop">
+          <video data-flow-clip muted loop playsinline preload="none" width="660" height="1434" poster="../assets/video/en/month.webp" aria-label="PsiControle demo: financial values hidden and shown, and the list of pending payments">
+            <source src="../assets/video/en/month.mp4" type="video/mp4">
+          </video>
+          </div>
+        </div>
       </article>
-      </div>
-      <p class="works-with">Works with <strong>Siri</strong>, <strong>Shortcuts</strong>, <strong>Calendar</strong> and <strong>iCloud</strong>.</p>
-    </div>
-  </section>
-
-  <section id="demo" class="wrap" aria-labelledby="demo-title">
-    <div class="demo">
-      <div>
-        <h2 id="demo-title">See it in motion.</h2>
-        <p>25 seconds, with fictional data.</p>
-        <p class="demo-note" id="demo-note">The features shown require a subscription.</p>
-        <details><summary>Read the demonstration</summary><p>Your routine, in one place. See your schedule clearly. Find each patient. Keep their context close. Stay on top of payments. The demonstrated features require a subscription. The recording uses fictional data.</p></details>
-      </div>
-      <video class="product-demo" controls playsinline preload="none" poster="../assets/video/en/poster.jpg" width="590" height="1280" aria-labelledby="demo-title" aria-describedby="demo-note">
-        <source src="../assets/video/en/demo.mp4" type="video/mp4">
-        <track kind="captions" src="../assets/video/en/captions.vtt" srclang="en" label="en-US">
-        <a href="../assets/video/en/demo.mp4">Your browser cannot play this video. Download the demonstration.</a>
-      </video>
     </div>
   </section>
 

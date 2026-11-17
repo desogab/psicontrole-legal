@@ -73,41 +73,28 @@
     link.addEventListener("click", (event) => event.preventDefault());
   });
 
-  // Feature tour: on phones the panels swipe horizontally. The tabs are plain anchors (they work without
-  // script); here they scroll the track instead of the page and follow the panel in view.
-  const track = document.querySelector(".tour-track");
-  const tabs = Array.from(document.querySelectorAll(".tour-tabs a"));
+  // Workflow clips: silent loops that load and play only while on screen. With reduced motion
+  // they stay on their poster (the first screen of the workflow).
+  const clips = Array.from(document.querySelectorAll("video[data-flow-clip]"));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  if (track && tabs.length) {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const panelFor = (tab) => document.getElementById(tab.hash.slice(1));
-    const setCurrent = (id) => {
-      tabs.forEach((tab) => {
-        if (tab.hash === `#${id}`) tab.setAttribute("aria-current", "true");
-        else tab.removeAttribute("aria-current");
-      });
-    };
-
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", (event) => {
-        const panel = panelFor(tab);
-        if (!panel || track.scrollWidth <= track.clientWidth) return;
-        event.preventDefault();
-        track.scrollTo({ left: panel.offsetLeft - track.offsetLeft, behavior: reduceMotion ? "auto" : "smooth" });
-        setCurrent(panel.id);
-      });
+  if (clips.length && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const clip = entry.target;
+          if (entry.isIntersecting && !reduceMotion.matches) {
+            clip.play().catch(() => {});
+          } else {
+            clip.pause();
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    clips.forEach((clip) => observer.observe(clip));
+    reduceMotion.addEventListener?.("change", () => {
+      if (reduceMotion.matches) clips.forEach((clip) => clip.pause());
     });
-
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) setCurrent(entry.target.id);
-          });
-        },
-        { root: track, threshold: 0.6 }
-      );
-      tabs.map(panelFor).filter(Boolean).forEach((panel) => observer.observe(panel));
-    }
   }
 })();
