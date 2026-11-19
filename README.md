@@ -1,6 +1,6 @@
 # PsiControle Landing Page
 
-Static trilingual landing and legal site for **PsiControle**, a native iOS app for organizing patients, schedules, recurring appointments, reminders, finances, Siri/Shortcuts workflows, and optional Calendar integration.
+Static multilingual landing and legal site for **PsiControle**, a native iOS app for organizing patients, schedules, recurring appointments, reminders, finances, Siri/Shortcuts workflows, and optional Calendar integration.
 
 ## Routes
 
@@ -10,12 +10,16 @@ Static trilingual landing and legal site for **PsiControle**, a native iOS app f
 | `/pt-BR/` | Portuguese landing page |
 | `/en/` | English landing page |
 | `/es-ES/` | Spanish (Spain) landing page |
+| `/es-419/` | Latin American Spanish landing page |
 | `/pt-BR/privacy.html` | Portuguese Privacy Policy |
 | `/pt-BR/terms.html` | Portuguese Terms of Use |
 | `/en/privacy.html` | English Privacy Policy |
 | `/en/terms.html` | English Terms of Use |
 | `/es-ES/privacy.html` | Spanish (Spain) Privacy Policy |
 | `/es-ES/terms.html` | Spanish (Spain) Terms of Use |
+| `/es-419/privacy.html` | Latin American Spanish Privacy Policy |
+| `/es-419/terms.html` | Latin American Spanish Terms of Use |
+| `/sitemap.xml` | Sitemap with `hreflang` alternates for every page |
 
 ## App Store Link
 
@@ -26,11 +30,12 @@ Set the localized download URLs in one place:
 window.PSICONTROLE_CONFIG = {
   APP_STORE_URL_EN: "https://apps.apple.com/us/app/id6772772414",
   APP_STORE_URL_PT_BR: "https://apps.apple.com/br/app/id6772772414",
-  APP_STORE_URL_ES_ES: "https://apps.apple.com/app/id6772772414"
+  APP_STORE_URL_ES_ES: "https://apps.apple.com/app/id6772772414",
+  APP_STORE_URL_ES_419: "https://apps.apple.com/app/id6772772414"
 };
 ```
 
-Download links use the stable app ID rather than a title that can change. Portuguese uses the Brazil storefront, English uses the US storefront, and Spanish uses the international link because the Spain storefront currently returns a missing page. App availability still depends on the visitor’s App Store account region. Each download button has the same URL in its HTML so it remains usable without JavaScript. The script selects the configured URL from the current page language.
+Download links use the stable app ID rather than a title that can change. Portuguese uses the Brazil storefront, English uses the US storefront, and both Spanish versions (`es-ES`, `es-419`) use the international link because the Spain storefront currently returns a missing page. App availability still depends on the visitor’s App Store account region. Each download button has the same URL in its HTML so it remains usable without JavaScript. The script selects the configured URL from the current page language.
 
 ## Tech
 
